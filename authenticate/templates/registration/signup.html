@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Registro{% endblock %}
+{% block body %}
+<div class="form-content">
+        <div class="form-container blog">
+            <div class="form-group">
+            {% if form_signup.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ form_signup.errors }}
+            </div>
+            {% endif %} 
+            <h2 class="card-title">Register here</h2>
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="m-2">
+                    {{ form_signup.username.label }}
+                    {{ form_signup.username }}
+                </div>
+                <div class="m-2">
+                    {{ form_signup.email.label }}
+                    {{ form_signup.email }}
+                </div>
+                <div class="m-2">
+                    {{ form_signup.email2.label }}
+                    {{ form_signup.email2 }}
+                </div>
+                <br>
+                <input type="submit" value="Register new user" class="btn btn-primary">
+                <div class="text-center mt-2">
+                <a href="{% url 'login' %}">Have an account? <b>Log in</b></a></div>
+
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}
