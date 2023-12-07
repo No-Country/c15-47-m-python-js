@@ -1,8 +1,9 @@
 venv
 *.pyc
+__pycache__/
 nocountry/__pycache__/__init__.cpython-311.pyc
 nocountry/__pycache__/settings.cpython-311.pyc
 nocountry/__pycache__/urls.cpython-311.pyc
 nocountry/__pycache__/wsgi.cpython-311.pyc
-prueba1/__pycache__/__init__.cpython-311.pyc
-prueba1/__pycache__/views.cpython-311.pyc
+nocountry/__pycache__/settings.cpython-311.pyc
+.env
