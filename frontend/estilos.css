@@ -1,0 +1,21 @@
+.header {
+  width: 100%;
+  height: 500px;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    url(./img/fondonew.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contenido button {
+  border-radius: 22px;
+  background: var(--PRIMARIO, #ef7828);
+  width: 186px;
+  height: 51px;
+  flex-shrink: 0;
+}
