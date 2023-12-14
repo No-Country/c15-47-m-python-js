@@ -4,8 +4,8 @@
 {% block title %}Registro{% endblock %}
 {% block body %}
 <div class="form-content">
-        <div class="form-container blog">
-            <div class="form-group">
+    <div class="form-container blog">
+        <div class="form-group">
             {% if form_signup.errors %}
             <div class="alert alert-danger" role="alert">
                 {{ form_signup.errors }}
@@ -29,8 +29,8 @@
                 <br>
                 <input type="submit" value="Register new user" class="btn btn-primary">
                 <div class="text-center mt-2">
-                <a href="{% url 'login' %}">Have an account? <b>Log in</b></a></div>
-
+                    <a href="{% url 'login' %}">Have an account? <b>Log in</b></a>
+                </div>
             </form>
         </div>
     </div>

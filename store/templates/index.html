@@ -3,12 +3,366 @@
 
 {% block title %}Bookstore{% endblock %}
 
-{% block body %}
-    <h1>Welcome to Bookstore!</h1>
 
-    {% if user.is_authenticated %}
-        <a href="{% url 'logout' %}">Logout</a>
-    {% else %}
-        <a href="{% url 'login' %}">Login</a>
-    {% endif %}
+
+{% block body %}
+
+    <div class="search py-5">
+        <form action="">
+            <input type="text" class="search-form">
+        </form>
+    </div>
+
+    <div class="productpopular-organism">
+        <div class="popular-text">
+            <div class="popular-rectangle-atm">
+                <div class="popular-rectangle-atm-rect">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="65" viewBox="0 0 6 65" fill="none">
+                        <rect width="6" height="65" fill="#43A599"/>
+                        </svg>
+                </div>
+            </div>
+
+            <div class="popular-text-atm">
+                <div class="popular-text-atm-in">
+                    <div class="popular-text-atm-in-text">
+                        Popular
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popularproducts-list">
+            <div class="div-card-bookmockup">
+                <div class="card-book-mockupmadre-atm">
+                    <img src="{% static 'img/placeholder-book-popular.png' %}">
+                </div>
+                <div class="card-text-title-atm">
+                    Book 1
+                </div>
+                <div class="card-text-subtitle-atm">
+                    Author
+                </div>
+                <div class="card-text-price-atm">
+                    $99.90
+                </div>
+            </div>
+            <div class="div-card-bookmockup">
+                <div class="card-book-mockupmadre-atm">
+                    <img src="{% static 'img/placeholder-book-popular.png' %}">
+                </div>
+                <div class="card-text-title-atm">
+                    Book 1
+                </div>
+                <div class="card-text-subtitle-atm">
+                    Author
+                </div>
+                <div class="card-text-price-atm">
+                    $99.90
+                </div>
+            </div>
+            <div class="div-card-bookmockup">
+                <div class="card-book-mockupmadre-atm">
+                    <img src="{% static 'img/placeholder-book-popular.png' %}">
+                </div>
+                <div class="card-text-title-atm">
+                    Book 1
+                </div>
+                <div class="card-text-subtitle-atm">
+                    Author
+                </div>
+                <div class="card-text-price-atm">
+                    $99.90
+                </div>
+            </div>
+            <div class="div-card-bookmockup">
+                <div class="card-book-mockupmadre-atm">
+                    <img src="{% static 'img/placeholder-book-popular.png' %}">
+                </div>
+                <div class="card-text-title-atm">
+                    Book 1
+                </div>
+                <div class="card-text-subtitle-atm">
+                    Author
+                </div>
+                <div class="card-text-price-atm">
+                    $99.90
+                </div>
+            </div>
+            <div class="div-card-bookmockup">
+                <div class="card-book-mockupmadre-atm">
+                    <img src="{% static 'img/placeholder-book-popular.png' %}">
+                </div>
+                <div class="card-text-title-atm">
+                    Book 1
+                </div>
+                <div class="card-text-subtitle-atm">
+                    Author
+                </div>
+                <div class="card-text-price-atm">
+                    $99.90
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="bannerchristmas-organism">
+        <div class="banner-img-background-atm">
+            <div class="bannerchristmas-text">
+                <div class="bannerchristmas-title-atm">
+                    Cyber Week Deals
+                </div>
+                <div class="bannerchristmas-button">
+                    <button class="button-header">View More</button>
+                </div>
+            </div>
+            <div class="bannerchristmas-imgmockup-atm">
+                <div class="bannerchristmas-imgmockup-atm-container">
+                    <div class="bannerchristmas-imgmockup-atm-img">
+                        <img src="{% static 'img/placeholder-book-christmas.png' %}">
+                    </div>
+                </div>
+                <div class="bannerchristmas-imgmockup-atm-container">
+                    <div class="bannerchristmas-imgmockup-atm-img">
+                        <img src="{% static 'img/placeholder-book-christmas.png' %}">
+                    </div>
+                </div>
+                <div class="bannerchristmas-imgmockup-atm-container">
+                    <div class="bannerchristmas-imgmockup-atm-img">
+                        <img src="{% static 'img/placeholder-book-christmas.png' %}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="author-organism">
+        <div class="author-text-molecule">
+            <div class="author-text-molecule-title">
+                <div class="popular-rectangle-atm">
+                    <div class="popular-rectangle-atm-rect">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="65" viewBox="0 0 6 65" fill="none">
+                            <rect width="6" height="65" fill="#43A599"/>
+                            </svg>
+                    </div>
+                </div>
+                <div class="popular-text-atm">
+                    <div class="popular-text-atm-in">
+                        <div class="popular-text-atm-in-text">
+                            Danielle Steel
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="biography-textsubtitle-atm">
+                Danielle Steel is a passionate author whose stories explore the nuances of the human condition. Born in Buenos Aires, Argentina, she has carried her unique experiences and perspectives through her travels and experiences. Her connection to literature began in childhood, when she would retreat into the pages of books to explore distant and unknown worlds.
+            </div>
+        </div>
+        <div class="author-img-molecule">
+            <img src="{% static 'img/danielle.png' %}">
+        </div>
+    </div>
+
+    <div class="row reviews-organism">
+        <div class="col-lg-12">
+            <div class="reviews-title-molecule">
+                <div class="popular-rectangle-atm">
+                    <div class="popular-rectangle-atm-rect">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="65" viewBox="0 0 6 65" fill="none">
+                            <rect width="6" height="65" fill="#43A599"/>
+                            </svg>
+                    </div>
+                </div>
+                <div class="popular-text-atm">
+                    <div class="popular-text-atm-in">
+                        <div class="popular-text-atm-in-text">
+                            Reviews
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-molecule">
+                <div class="reviews-rectangle-atm">
+                    <div class="row">
+                        <div class="col-lg-3 reviews-avatar-atm">
+                            <img src="{% static 'img/reviews-avatar-atm.png' %}">
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="reviews-text-name-atm">
+                                Camila Herrera
+                            </div>
+                            <div class="reviews-star-atm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="194" height="33" viewBox="0 0 194 33" fill="none">
+                                    <path d="M16.3501 2.89853C16.6511 1.98056 17.9497 1.98056 18.2506 2.89853L20.8124 10.7127C20.9471 11.1235 21.3304 11.4012 21.7626 11.4012H30.0336C31.0045 11.4012 31.4058 12.6454 30.6179 13.2127L23.942 18.0199C23.5884 18.2746 23.4404 18.7289 23.5761 19.143L26.1297 26.9322C26.4312 27.852 25.3806 28.6208 24.5951 28.0552L17.8847 23.2232C17.5357 22.9719 17.0651 22.9719 16.716 23.2232L10.0056 28.0552C9.22019 28.6208 8.16954 27.852 8.47106 26.9322L11.0247 19.143C11.1604 18.7289 11.0124 18.2746 10.6588 18.0199L3.98284 13.2127C3.19497 12.6454 3.59631 11.4012 4.56719 11.4012H12.8381C13.2704 11.4012 13.6537 11.1235 13.7884 10.7127L16.3501 2.89853Z" fill="#EF7828"/>
+                                    <path d="M55.1945 2.9978C55.4899 2.06841 56.805 2.06842 57.1005 2.9978L59.5503 10.7042C59.6823 11.1193 60.0678 11.4012 60.5033 11.4012H68.4769C69.4403 11.4012 69.8466 12.6297 69.0731 13.2041L62.585 18.022C62.2422 18.2766 62.0988 18.7208 62.2282 19.1278L64.6975 26.8954C64.9916 27.8205 63.9277 28.5799 63.1483 28.0012L56.7436 23.2452C56.3897 22.9823 55.9053 22.9823 55.5513 23.2452L49.1466 28.0012C48.3672 28.5799 47.3033 27.8205 47.5974 26.8954L50.0667 19.1278C50.1961 18.7208 50.0528 18.2766 49.7099 18.022L43.2218 13.2041C42.4483 12.6297 42.8546 11.4012 43.818 11.4012H51.7916C52.2272 11.4012 52.6126 11.1193 52.7446 10.7042L55.1945 2.9978Z" fill="#EF7828"/>
+                                    <path d="M96.0572 2.89853C96.3581 1.98056 97.6567 1.98056 97.9577 2.89853L100.519 10.7127C100.654 11.1235 101.037 11.4012 101.47 11.4012H109.741C110.711 11.4012 111.113 12.6454 110.325 13.2127L103.649 18.0199C103.295 18.2746 103.147 18.7289 103.283 19.143L105.837 26.9322C106.138 27.852 105.088 28.6208 104.302 28.0552L97.5918 23.2232C97.2427 22.9719 96.7721 22.9719 96.4231 23.2232L89.7127 28.0552C88.9272 28.6208 87.8766 27.852 88.1781 26.9322L90.7317 19.143C90.8674 18.7289 90.7194 18.2746 90.3658 18.0199L83.6899 13.2127C82.902 12.6454 83.3033 11.4012 84.2742 11.4012H92.5452C92.9774 11.4012 93.3607 11.1235 93.4954 10.7127L96.0572 2.89853Z" fill="#EF7828"/>
+                                    <path d="M135.409 2.89853C135.71 1.98056 137.008 1.98056 137.309 2.89853L139.871 10.7127C140.006 11.1235 140.389 11.4012 140.821 11.4012H149.092C150.063 11.4012 150.464 12.6454 149.677 13.2127L143.001 18.0199C142.647 18.2746 142.499 18.7289 142.635 19.143L145.188 26.9322C145.49 27.852 144.439 28.6208 143.654 28.0552L136.943 23.2232C136.594 22.9719 136.124 22.9719 135.775 23.2232L129.064 28.0552C128.279 28.6208 127.228 27.852 127.53 26.9322L130.083 19.143C130.219 18.7289 130.071 18.2746 129.717 18.0199L123.041 13.2127C122.254 12.6454 122.655 11.4012 123.626 11.4012H131.897C132.329 11.4012 132.712 11.1235 132.847 10.7127L135.409 2.89853Z" fill="#EF7828"/>
+                                    <path d="M175.768 2.89853C176.069 1.98056 177.368 1.98056 177.669 2.89853L180.23 10.7127C180.365 11.1235 180.748 11.4012 181.181 11.4012H189.452C190.422 11.4012 190.824 12.6454 190.036 13.2127L183.36 18.0199C183.006 18.2746 182.858 18.7289 182.994 19.143L185.548 26.9322C185.849 27.852 184.799 28.6208 184.013 28.0552L177.303 23.2232C176.954 22.9719 176.483 22.9719 176.134 23.2232L169.424 28.0552C168.638 28.6208 167.588 27.852 167.889 26.9322L170.443 19.143C170.578 18.7289 170.43 18.2746 170.077 18.0199L163.401 13.2127C162.613 12.6454 163.014 11.4012 163.985 11.4012H172.256C172.688 11.4012 173.072 11.1235 173.206 10.7127L175.768 2.89853Z" fill="#EF7828"/>
+                                    </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews-text-cmnts-atm">
+                        This bookstore is my daily escape. The feeling of browsing the shelves and discovering new stories is incomparable. A magical corner where books become friends.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column w-50">
+            <div class="reviews-molecule1">
+                <div class="reviews-rectangle1-atm">
+                    <div class="row">
+                        <div class="column w-25 reviews-avatar-atm">
+                            <img src="{% static 'img/reviews-avatar-atm.png' %}">
+                        </div>
+                        <div class="column w-75">
+                            <div class="reviews-text-name-atm">
+                                Camila Herrera
+                            </div>
+                            <div class="reviews-star-atm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="194" height="33" viewBox="0 0 194 33" fill="none">
+                                    <path d="M16.3501 2.89853C16.6511 1.98056 17.9497 1.98056 18.2506 2.89853L20.8124 10.7127C20.9471 11.1235 21.3304 11.4012 21.7626 11.4012H30.0336C31.0045 11.4012 31.4058 12.6454 30.6179 13.2127L23.942 18.0199C23.5884 18.2746 23.4404 18.7289 23.5761 19.143L26.1297 26.9322C26.4312 27.852 25.3806 28.6208 24.5951 28.0552L17.8847 23.2232C17.5357 22.9719 17.0651 22.9719 16.716 23.2232L10.0056 28.0552C9.22019 28.6208 8.16954 27.852 8.47106 26.9322L11.0247 19.143C11.1604 18.7289 11.0124 18.2746 10.6588 18.0199L3.98284 13.2127C3.19497 12.6454 3.59631 11.4012 4.56719 11.4012H12.8381C13.2704 11.4012 13.6537 11.1235 13.7884 10.7127L16.3501 2.89853Z" fill="#EF7828"/>
+                                    <path d="M55.1945 2.9978C55.4899 2.06841 56.805 2.06842 57.1005 2.9978L59.5503 10.7042C59.6823 11.1193 60.0678 11.4012 60.5033 11.4012H68.4769C69.4403 11.4012 69.8466 12.6297 69.0731 13.2041L62.585 18.022C62.2422 18.2766 62.0988 18.7208 62.2282 19.1278L64.6975 26.8954C64.9916 27.8205 63.9277 28.5799 63.1483 28.0012L56.7436 23.2452C56.3897 22.9823 55.9053 22.9823 55.5513 23.2452L49.1466 28.0012C48.3672 28.5799 47.3033 27.8205 47.5974 26.8954L50.0667 19.1278C50.1961 18.7208 50.0528 18.2766 49.7099 18.022L43.2218 13.2041C42.4483 12.6297 42.8546 11.4012 43.818 11.4012H51.7916C52.2272 11.4012 52.6126 11.1193 52.7446 10.7042L55.1945 2.9978Z" fill="#EF7828"/>
+                                    <path d="M96.0572 2.89853C96.3581 1.98056 97.6567 1.98056 97.9577 2.89853L100.519 10.7127C100.654 11.1235 101.037 11.4012 101.47 11.4012H109.741C110.711 11.4012 111.113 12.6454 110.325 13.2127L103.649 18.0199C103.295 18.2746 103.147 18.7289 103.283 19.143L105.837 26.9322C106.138 27.852 105.088 28.6208 104.302 28.0552L97.5918 23.2232C97.2427 22.9719 96.7721 22.9719 96.4231 23.2232L89.7127 28.0552C88.9272 28.6208 87.8766 27.852 88.1781 26.9322L90.7317 19.143C90.8674 18.7289 90.7194 18.2746 90.3658 18.0199L83.6899 13.2127C82.902 12.6454 83.3033 11.4012 84.2742 11.4012H92.5452C92.9774 11.4012 93.3607 11.1235 93.4954 10.7127L96.0572 2.89853Z" fill="#EF7828"/>
+                                    <path d="M135.409 2.89853C135.71 1.98056 137.008 1.98056 137.309 2.89853L139.871 10.7127C140.006 11.1235 140.389 11.4012 140.821 11.4012H149.092C150.063 11.4012 150.464 12.6454 149.677 13.2127L143.001 18.0199C142.647 18.2746 142.499 18.7289 142.635 19.143L145.188 26.9322C145.49 27.852 144.439 28.6208 143.654 28.0552L136.943 23.2232C136.594 22.9719 136.124 22.9719 135.775 23.2232L129.064 28.0552C128.279 28.6208 127.228 27.852 127.53 26.9322L130.083 19.143C130.219 18.7289 130.071 18.2746 129.717 18.0199L123.041 13.2127C122.254 12.6454 122.655 11.4012 123.626 11.4012H131.897C132.329 11.4012 132.712 11.1235 132.847 10.7127L135.409 2.89853Z" fill="#EF7828"/>
+                                    <path d="M175.768 2.89853C176.069 1.98056 177.368 1.98056 177.669 2.89853L180.23 10.7127C180.365 11.1235 180.748 11.4012 181.181 11.4012H189.452C190.422 11.4012 190.824 12.6454 190.036 13.2127L183.36 18.0199C183.006 18.2746 182.858 18.7289 182.994 19.143L185.548 26.9322C185.849 27.852 184.799 28.6208 184.013 28.0552L177.303 23.2232C176.954 22.9719 176.483 22.9719 176.134 23.2232L169.424 28.0552C168.638 28.6208 167.588 27.852 167.889 26.9322L170.443 19.143C170.578 18.7289 170.43 18.2746 170.077 18.0199L163.401 13.2127C162.613 12.6454 163.014 11.4012 163.985 11.4012H172.256C172.688 11.4012 173.072 11.1235 173.206 10.7127L175.768 2.89853Z" fill="#EF7828"/>
+                                    </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews-text-cmnts-atm">
+                        This bookstore is my daily escape. The feeling of browsing the shelves and discovering new stories is incomparable. A magical corner where books become friends.
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-molecule1">
+                <div class="reviews-rectangle1-atm">
+                    <div class="row">
+                        <div class="column w-25 reviews-avatar-atm">
+                            <img src="{% static 'img/reviews-avatar-atm.png' %}">
+                        </div>
+                        <div class="column w-75">
+                            <div class="reviews-text-name-atm">
+                                Camila Herrera
+                            </div>
+                            <div class="reviews-star-atm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="194" height="33" viewBox="0 0 194 33" fill="none">
+                                    <path d="M16.3501 2.89853C16.6511 1.98056 17.9497 1.98056 18.2506 2.89853L20.8124 10.7127C20.9471 11.1235 21.3304 11.4012 21.7626 11.4012H30.0336C31.0045 11.4012 31.4058 12.6454 30.6179 13.2127L23.942 18.0199C23.5884 18.2746 23.4404 18.7289 23.5761 19.143L26.1297 26.9322C26.4312 27.852 25.3806 28.6208 24.5951 28.0552L17.8847 23.2232C17.5357 22.9719 17.0651 22.9719 16.716 23.2232L10.0056 28.0552C9.22019 28.6208 8.16954 27.852 8.47106 26.9322L11.0247 19.143C11.1604 18.7289 11.0124 18.2746 10.6588 18.0199L3.98284 13.2127C3.19497 12.6454 3.59631 11.4012 4.56719 11.4012H12.8381C13.2704 11.4012 13.6537 11.1235 13.7884 10.7127L16.3501 2.89853Z" fill="#EF7828"/>
+                                    <path d="M55.1945 2.9978C55.4899 2.06841 56.805 2.06842 57.1005 2.9978L59.5503 10.7042C59.6823 11.1193 60.0678 11.4012 60.5033 11.4012H68.4769C69.4403 11.4012 69.8466 12.6297 69.0731 13.2041L62.585 18.022C62.2422 18.2766 62.0988 18.7208 62.2282 19.1278L64.6975 26.8954C64.9916 27.8205 63.9277 28.5799 63.1483 28.0012L56.7436 23.2452C56.3897 22.9823 55.9053 22.9823 55.5513 23.2452L49.1466 28.0012C48.3672 28.5799 47.3033 27.8205 47.5974 26.8954L50.0667 19.1278C50.1961 18.7208 50.0528 18.2766 49.7099 18.022L43.2218 13.2041C42.4483 12.6297 42.8546 11.4012 43.818 11.4012H51.7916C52.2272 11.4012 52.6126 11.1193 52.7446 10.7042L55.1945 2.9978Z" fill="#EF7828"/>
+                                    <path d="M96.0572 2.89853C96.3581 1.98056 97.6567 1.98056 97.9577 2.89853L100.519 10.7127C100.654 11.1235 101.037 11.4012 101.47 11.4012H109.741C110.711 11.4012 111.113 12.6454 110.325 13.2127L103.649 18.0199C103.295 18.2746 103.147 18.7289 103.283 19.143L105.837 26.9322C106.138 27.852 105.088 28.6208 104.302 28.0552L97.5918 23.2232C97.2427 22.9719 96.7721 22.9719 96.4231 23.2232L89.7127 28.0552C88.9272 28.6208 87.8766 27.852 88.1781 26.9322L90.7317 19.143C90.8674 18.7289 90.7194 18.2746 90.3658 18.0199L83.6899 13.2127C82.902 12.6454 83.3033 11.4012 84.2742 11.4012H92.5452C92.9774 11.4012 93.3607 11.1235 93.4954 10.7127L96.0572 2.89853Z" fill="#EF7828"/>
+                                    <path d="M135.409 2.89853C135.71 1.98056 137.008 1.98056 137.309 2.89853L139.871 10.7127C140.006 11.1235 140.389 11.4012 140.821 11.4012H149.092C150.063 11.4012 150.464 12.6454 149.677 13.2127L143.001 18.0199C142.647 18.2746 142.499 18.7289 142.635 19.143L145.188 26.9322C145.49 27.852 144.439 28.6208 143.654 28.0552L136.943 23.2232C136.594 22.9719 136.124 22.9719 135.775 23.2232L129.064 28.0552C128.279 28.6208 127.228 27.852 127.53 26.9322L130.083 19.143C130.219 18.7289 130.071 18.2746 129.717 18.0199L123.041 13.2127C122.254 12.6454 122.655 11.4012 123.626 11.4012H131.897C132.329 11.4012 132.712 11.1235 132.847 10.7127L135.409 2.89853Z" fill="#EF7828"/>
+                                    <path d="M175.768 2.89853C176.069 1.98056 177.368 1.98056 177.669 2.89853L180.23 10.7127C180.365 11.1235 180.748 11.4012 181.181 11.4012H189.452C190.422 11.4012 190.824 12.6454 190.036 13.2127L183.36 18.0199C183.006 18.2746 182.858 18.7289 182.994 19.143L185.548 26.9322C185.849 27.852 184.799 28.6208 184.013 28.0552L177.303 23.2232C176.954 22.9719 176.483 22.9719 176.134 23.2232L169.424 28.0552C168.638 28.6208 167.588 27.852 167.889 26.9322L170.443 19.143C170.578 18.7289 170.43 18.2746 170.077 18.0199L163.401 13.2127C162.613 12.6454 163.014 11.4012 163.985 11.4012H172.256C172.688 11.4012 173.072 11.1235 173.206 10.7127L175.768 2.89853Z" fill="#EF7828"/>
+                                    </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews-text-cmnts-atm">
+                        This bookstore is my daily escape. The feeling of browsing the shelves and discovering new stories is incomparable. A magical corner where books become friends.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="newsletter-organism">
+        <div class="newsletter-content">
+            <div class="row">
+                <div class="column w-50">
+                    <div class="newsletter-texttitle-atm">
+                        Subscribe to our Newsletter
+                    </div>
+                </div>
+                <div class="column w-50">
+                    <div class="newsletter-textsubtitle-atm">
+                        Submit your email address to receive offers & updates.
+                    </div>
+                    <div class="newsletter-emailform mt-3">
+                        <form action="">
+                            <div class="input-group">
+                                <input class="newsletter-emailform-input" type="text">
+                                <button class="newsletter-emailform-button">></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-organism">
+        <div class="footer-rectangle-atm">
+            <div class="container-fluid g-1">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="footer-listtitle">
+                            CATEGORIES
+                        </div>
+                        <div class="footer-list-atm">
+                            Art and Photography
+                        </br>
+                            Biographies and Memoirs
+                        </br>
+                            Science Fiction and Fantasy
+                        </br>
+                            Cooking and Gastronomy
+                        </br>
+                            Comics and Graphic Novels
+                        </br>
+                            Sports and Leisure
+                        </br>
+                            Economics & Finance
+                        </br>
+                            Education and Reference
+                        </br>
+                            Family and Relationships
+                        </br>
+                            Home & Gardening
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="footer-listtitle">
+                            ACCOUNT
+                        </div>
+                        <div class="footer-list-atm">
+                            Log In
+                        </br>
+                            Sign In
+                        </br>
+                            Forgot my password
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="footer-listtitle">
+                            SOCIAL MEDIA
+                        </div>
+                        <div class="footer-list-atm">
+                            Facebook
+                        </br>
+                            WhatsApp
+                        </br>
+                            Instagram
+                        </br>
+                            Twitter
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="footer-listtitle">
+                            LEGAL
+                        </div>
+                        <div class="footer-list-atm">
+                            Cookies
+                        </br>
+                            Terms & Conditions
+                        </br>
+                            Privacy Policies
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+
 {% endblock %}

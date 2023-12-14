@@ -1,0 +1,10 @@
+.header {
+    background: url(/static/img/header.png) no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.header .navbar {
+    background-color: transparent !important;
+}
+
