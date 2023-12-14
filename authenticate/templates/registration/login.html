@@ -1,34 +1,83 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
+{% load static %}
 
-{% block title %}Login{% endblock %}
+{% block title %}Login{% endblock %} 
+
+{% block navegation %}
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-3 mb-5 bg-white rounded m-auto">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt="Logo" width="250px" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav px-3">
+                <li class="nav-item dropdown">
+                    <a class="nav-link2 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                        <a class="dropdown-item" href="#">Category 1</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Category 2</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Category 3</a>
+                    </li>
+                    </ul>
+                </li>
+                {% if user.is_authenticated %}
+                    <li class="nav-item px-2">
+                        <a class="nav-link2" href="#">Cart</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link2" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link2" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item mx-auto">
+                        <a class="nav-link2" href="{% url 'login' %}">Login</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+{% endblock %}
 
 {% block body %}
+
+
 {% if user.is_authenticated %}
-    {% comment %} El usuario ya ha iniciado sesión, redirigir al home {% endcomment %}
-    {% load static %}
+    {% comment %}El usuario ya ha iniciado sesión, redirigir al home{% endcomment %} {% load static %}
     <script>
-        window.location.href = "{% url 'index' %}";
+        window.location.href = "{% url 'index' %}"
     </script>
 {% else %}
     <div class="form-contentl">
         <div class="form-container blog">
             <div class="form-group">
                 {% if error %}
-                <div class="alert alert-danger" role="alert">
-                    {{ error }}
-                </div>
+                    <div class="alert alert-danger" role="alert">{{ error }}</div>
                 {% endif %}
                 <h2>Welcome to Bookstore!</h2>
                 <form action="" method="post">
-                    {% csrf_token %}
-                    {{ form_login.email.label }}
-                    {{ form_login.email }}
-                    {{ form_login.password.label }}
+                {% csrf_token %}
+                <div class="m-2">
+                    {{ form_login.email.label }} 
+                    {{ form_login.email }} 
+                </div>
+                <div class="m-2">
+                    {{ form_login.password.label }} 
                     {{ form_login.password }}
-                    <br>
-                    <input type="submit" value="Login" class="btn btn-primary">
-                    <div class="text-center mt-2">
-                    <a href="{% url 'register' %}">New to Bookstore? <b>Start here</b></a></div>
+                </div>
+                <br />
+                <input type="submit" value="Login" class="btn btn-primary" />
+                <div class="text-center mt-2">
+                    <a href="{% url 'register' %}">New to Bookstore? <b>Start here</b></a>
+                </div>
                 </form>
             </div>
         </div>
