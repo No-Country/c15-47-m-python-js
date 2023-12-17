@@ -6,7 +6,7 @@
 {% block body %}
 
 <div class="back">
-    <button class="back-button">< Home</button>
+    <a href="{% url 'index' %}"><button class="back-button">< Home</button></a>
 </div>
 <div class="main-page-container">
     <div class="row">
@@ -16,7 +16,12 @@
                 <p class="text-dark fs-5 fw-medium font-family-Rubik m-0 px-3 py-2">Categories</p>
                 <div class="border border-1 border-dark"></div>
                 <p class="m-0 px-3 py-2">
-                    <span class="text-dark fs-6 fw-normal font-family-Rubik">
+                    <span class="text-dark fs-6 fw-normal">
+                        {% for category in categories %}
+                            {{ category.name }}</br>
+                        {% endfor %}
+                    </span>
+                    <span class="text-dark fs-6 fw-normal">
                         {% for category in categories %}
                             {{ category.name }}</br>
                         {% endfor %}
@@ -41,7 +46,7 @@
                                 <div class="card flex-row">
                                     <img class="card-img-left example-card-img-responsive" src="{% static 'img/placeholder-book-popular.png' %}"/>
                                     <div class="card-body">
-                                        <p class="text-dark fs-4 fw-semibold m-0 px-3 py-2">{{ book.title }}</p>
+                                        <a href="{% url "book" book.id %}"><p class="text-dark fs-4 fw-semibold m-0 px-3 py-2">{{ book.title }}</p></a>
                                         <p class="text-dark fs-6 fw-semibold m-0 px-3 py-2">{{ book.id_author }}</p>
                                         <p class="text-dark fs-6 fw-light m-0 px-3 py-2">{{ book.id_category }}</p>
                                         <p class="text-dark fs-6 fw-semibold m-0 px-3 py-2">${{ book.price }}</p>

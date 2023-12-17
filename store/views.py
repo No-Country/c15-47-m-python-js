@@ -8,8 +8,8 @@ import contextlib
 User = get_user_model()
 
 
-class IndexView(View):
-    def get(self, request):
+class IndexView(View):    
+    def get(self, request, **kwargs):
         context = {}
         try:
             user = User.objects.get(id=request.user.id)
@@ -21,6 +21,7 @@ class IndexView(View):
             context["customer"] = customer
         except Customer.DoesNotExist:
             pass
+        context['categories'] = Category.objects.all()
         return render(request, "index.html", context)
 
 class BookListView(ListView):
