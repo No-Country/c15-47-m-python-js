@@ -69,3 +69,6 @@ class OrderBook (models.Model):
 
     def total_order(self):
         return self.quantity * self.id_book.price
+
+class Popular(models.Model):
+    id_book = models.OneToOneField(Book,on_delete=models.CASCADE,primary_key=True)

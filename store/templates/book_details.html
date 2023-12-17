@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Bookstore{% endblock %}
+
+{% block body %}
+<div class="back">
+    <button class="back-button">< Home</button>
+</div>
+<div class="container">
+    {{ book.id_category }} > {{ book.title }}
+    <div class="row">
+        <div class="col col-sm-6">
+            <img src="{% static "img/placeholder-book-popular.png" %}"/>
+        </div>
+        <div class="col col-sm-6">
+            <h2>{{ book.title }}</h2>
+            <p>By {{ book.id_author }}
+        </div>
+    </div>
+
+{% endblock body %}

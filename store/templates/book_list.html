@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Bookstore{% endblock %}
+
+{% block body %}
+
+<div class="back">
+    <button class="back-button">< Home</button>
+</div>
+<div class="main-page-container">
+    <div class="row">
+        <div class="col-3">
+            <div class="bg-danger-subtle bg-opacity-75 rounded-5">
+                <input class="rounded-5 shadow border border-2 border-dark border-opacity-25" type="text">
+                <p class="text-dark fs-5 fw-medium font-family-Rubik m-0 px-3 py-2">Categories</p>
+                <div class="border border-1 border-dark"></div>
+                <p class="m-0 px-3 py-2">
+                    <span class="text-dark fs-6 fw-normal font-family-Rubik">
+                        {% for category in categories %}
+                            {{ category.name }}</br>
+                        {% endfor %}
+                    </span>
+                </p>
+            
+                <p class="text-dark fs-5 fw-medium font-family-Rubik m-0 px-3 py-2">Price</p>
+                <div class="border border-1 border-dark"></div>
+                <p class="text-dark fs-6 fw-normal font-family-Rubik  m-0 px-3 py-2">Ascending<br/>Descending<br/></p>
+            </div>
+        </div>
+
+        <div class="col-9">
+            <div class="booklist">
+                <div class="booklist-category">
+                    <p class="text-secondary fs-4 fw-semibold m-0 px-3 py-2">Category Name</p>
+                </div>
+                <div class="booklist-view">
+                    <div class="row">
+                        {% for book in books %}
+                            <div class="col-lg-6">
+                                <div class="card flex-row">
+                                    <img class="card-img-left example-card-img-responsive" src="{% static 'img/placeholder-book-popular.png' %}"/>
+                                    <div class="card-body">
+                                        <p class="text-dark fs-4 fw-semibold m-0 px-3 py-2">{{ book.title }}</p>
+                                        <p class="text-dark fs-6 fw-semibold m-0 px-3 py-2">{{ book.id_author }}</p>
+                                        <p class="text-dark fs-6 fw-light m-0 px-3 py-2">{{ book.id_category }}</p>
+                                        <p class="text-dark fs-6 fw-semibold m-0 px-3 py-2">${{ book.price }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

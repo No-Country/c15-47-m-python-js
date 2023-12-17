@@ -1,8 +1,9 @@
 from django.contrib.auth import get_user_model
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views import View
-from django.views.generic import ListView
-from .models import Customer
+from django.views.generic import ListView, DetailView
+from .models import Customer, Book, Category
+import contextlib
 
 User = get_user_model()
 
@@ -21,3 +22,23 @@ class IndexView(View):
         except Customer.DoesNotExist:
             pass
         return render(request, "index.html", context)
+
+class BookListView(ListView):
+    model: Book
+    context_object_name = 'books'
+    queryset = Book.objects.order_by('title')
+    # ordering = ['title']
+    template_name = 'book_list.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()
+        return context
+
+class BookDetail(View):
+    template_name = "book_details.html"
+    
+    def get(self, request, pk):
+        book = get_object_or_404(Book, pk=pk)
+        context = {'book': book}
+        return render(request, self.template_name, context)
