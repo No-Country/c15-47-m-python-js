@@ -42,7 +42,7 @@
                         </li>
                         {% if user.is_authenticated %}
                             <li class="nav-item px-2">
-                                <a style="color: black" class="nav-link" href="#">Cart</a>
+                                <a style="color: black" class="nav-link" href="{% url "cart_summary"%}">Cart</a>
                             </li>
                             <li style="color: black"class="nav-item px-2">
                                 <a style="color: black" class="nav-link" href="#">Profile</a>
