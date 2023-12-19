@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+.popup-overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 0;
+}
+
+:root {
+  /* fonts */
+  --tipografas-web-nav-bar: "Open Sans";
+  --font-kaisei-tokumin: "Kaisei Tokumin";
+  --font-inter: Inter;
+  --font-rubik: Rubik;
+
+  /* font sizes */
+  --tipografas-web-nav-bar-size: 18px;
+  --font-size-xl: 20px;
+  --font-size-mini: 15px;
+  --font-size-base: 16px;
+  --font-size-mid: 17px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-gray-100: #412e27;
+  --color-black: #000;
+  --quinto: #806c61;
+  --darkgreen: #07352f;
+  --tourquesemain: #43a599;
+  --color-darkgray: #a7a7a7;
+
+  /* Border radiuses */
+  --br-5xs: 8px;
+  --br-11xl: 30px;
+  --br-23xl: 42px;
+  --br-2xs: 11px;
+}

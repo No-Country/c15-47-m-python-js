@@ -30,6 +30,7 @@ This is an online bookstore built using Python and Django framework. The project
 + Run migrations: `python manage.py migrate`
 + Create a superuser (admin): `python manage.py createsuperuser`
 + Start the server: `python manage.py runserver`
++ 
 
 ### Usage
 * Access the admin panel by going to `http://localhost:8000/admin/` and log in using the superuser credentials created earlier.

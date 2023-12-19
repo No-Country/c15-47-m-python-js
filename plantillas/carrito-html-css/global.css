@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+.popup-overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 0;
+}
+
+:root {
+  /* fonts */
+  --font-inter: Inter;
+  --tipografas-web-nav-bar: "Open Sans";
+  --font-kaisei-tokumin: "Kaisei Tokumin";
+  --font-rubik: Rubik;
+
+  /* font sizes */
+  --font-size-base: 16px;
+  --tipografas-web-nav-bar-size: 18px;
+  --font-size-base-7: 16.7px;
+  --font-size-smi: 13px;
+  --font-size-xl: 20px;
+  --font-size-mini: 15px;
+  --font-size-3xl: 22px;
+  --font-size-sm: 14px;
+  --font-size-mid: 17px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-azure: #f1fffd;
+  --tourquesemain: #43a599;
+  --color-mediumturquoise: #87e7db;
+  --darkgreen: #07352f;
+  --secundario: #412e27;
+  --gray: #e7efee;
+  --color-darkgray: #a7a7a7;
+  --primario: #ef7828;
+
+  /* Gaps */
+  --gap-sm: 14px;
+  --gap-8xs: 5px;
+
+  /* Paddings */
+  --padding-5xs: 8px;
+  --padding-2xl: 21px;
+
+  /* Border radiuses */
+  --br-3xl: 22px;
+  --br-sm-2: 13.2px;
+  --br-3xs: 10px;
+  --br-12xs: 1px;
+  --br-6xs: 7px;
+  --br-lg: 18px;
+  --br-2xs: 11px;
+}

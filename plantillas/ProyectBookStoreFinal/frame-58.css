@@ -1,0 +1,70 @@
+.group-child9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-lg);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  width: 326px;
+  height: 82px;
+}
+.google-1-icon {
+  position: relative;
+  width: 29px;
+  height: 29px;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.ingresa-con-google {
+  position: relative;
+  font-weight: 500;
+}
+.google-1-parent {
+  position: absolute;
+  top: 26px;
+  left: 71px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 17px;
+}
+.rectangle-parent10 {
+  position: absolute;
+  top: 171px;
+  left: 96px;
+  width: 326px;
+  height: 82px;
+  cursor: pointer;
+}
+.log-in3 {
+  position: absolute;
+  top: 76px;
+  left: calc(50% - 29.5px);
+  font-size: var(--tipografas-web-subttulos-size);
+  font-weight: 500;
+}
+.fi-rr-cross-icon {
+  position: absolute;
+  top: 20px;
+  left: 465px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.group-wrapper {
+  position: relative;
+  background-color: #f8f8f8;
+  width: 517px;
+  height: 446px;
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: left;
+  font-size: var(--font-size-mini);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}

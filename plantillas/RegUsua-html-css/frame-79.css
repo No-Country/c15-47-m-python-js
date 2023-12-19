@@ -1,0 +1,144 @@
+.group-child,
+.title {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.group-child {
+  border-radius: var(--br-2xs);
+  background-color: var(--color-white);
+  width: 649px;
+  height: 427.76px;
+}
+.title {
+  height: 100%;
+  width: 100%;
+  line-height: 209.15%;
+  display: inline-block;
+}
+.arte-y-fotografa,
+.biografas-y-memorias,
+.biografas-y-memorias1 {
+  position: absolute;
+  top: 53px;
+  left: 57px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias,
+.biografas-y-memorias1 {
+  top: 90px;
+}
+.biografas-y-memorias1 {
+  top: 127px;
+}
+.arte-y-fotografa1,
+.biografas-y-memorias2,
+.biografas-y-memorias3 {
+  position: absolute;
+  top: 164px;
+  left: 57px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias2,
+.biografas-y-memorias3 {
+  top: 201px;
+}
+.biografas-y-memorias3 {
+  top: 238px;
+}
+.arte-y-fotografa2,
+.biografas-y-memorias4,
+.biografas-y-memorias5 {
+  position: absolute;
+  top: 275px;
+  left: 57px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias4,
+.biografas-y-memorias5 {
+  top: 312px;
+}
+.biografas-y-memorias5 {
+  top: 349px;
+}
+.arte-y-fotografa3,
+.biografas-y-memorias6,
+.biografas-y-memorias7 {
+  position: absolute;
+  top: 53px;
+  left: 354px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias6,
+.biografas-y-memorias7 {
+  top: 90px;
+}
+.biografas-y-memorias7 {
+  top: 127px;
+}
+.arte-y-fotografa4,
+.biografas-y-memorias8,
+.biografas-y-memorias9 {
+  position: absolute;
+  top: 164px;
+  left: 354px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias8,
+.biografas-y-memorias9 {
+  top: 201px;
+}
+.biografas-y-memorias9 {
+  top: 238px;
+}
+.biografas-y-memorias10,
+.biografas-y-memorias11,
+.biografas-y-memorias12 {
+  position: absolute;
+  top: 275px;
+  left: 354px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias11,
+.biografas-y-memorias12 {
+  top: 312px;
+}
+.biografas-y-memorias12 {
+  top: 349px;
+}
+.frame-child,
+.rectangle-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 649px;
+  height: 427.76px;
+}
+.frame-child {
+  top: -15px;
+  left: 48px;
+  border-radius: 2px;
+  width: 31px;
+  height: 31px;
+  object-fit: cover;
+}
+.group-parent {
+  position: relative;
+  border-radius: var(--br-2xs);
+  background-color: var(--color-white);
+  width: 648px;
+  height: 431px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  text-align: left;
+  font-size: var(--font-size-mid);
+  color: var(--color-darkgray);
+  font-family: var(--font-rubik);
+}

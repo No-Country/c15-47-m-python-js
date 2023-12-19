@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+.popup-overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 0;
+}
+
+:root {
+  /* fonts */
+  --tipografas-web-subttulos: "Open Sans";
+  --font-inter: Inter;
+  --font-rubik: Rubik;
+  --font-kaisei-tokumin: "Kaisei Tokumin";
+
+  /* font sizes */
+  --tipografas-web-nav-bar-size: 18px;
+  --tipografas-web-botones-size: 16.6px;
+  --font-size-29xl: 48px;
+  --tipografas-web-subttulos-size: 20px;
+  --font-size-mid: 17px;
+  --tipografas-web-buscador-size: 28px;
+  --font-size-sm: 14px;
+  --font-size-5xl: 24px;
+  --font-size-8xl: 27px;
+  --font-size-mini: 15px;
+  --font-size-xs: 12px;
+  --font-size-lgi: 19px;
+
+  /* Colors */
+  --color-white: #fff;
+  --secundario: #412e27;
+  --color-gray-200: rgba(65, 46, 39, 0.21);
+  --color-gray-100: rgba(255, 255, 255, 0.1);
+  --tourquesemain: #43a599;
+  --color-lightseagreen-100: rgba(67, 165, 153, 0.51);
+  --darkgreen: #07352f;
+  --gray: #e7efee;
+  --color-darkgray-100: #b4b4b4;
+  --color-darkgray: #a7a7a7;
+  --color-black: #000;
+
+  /* Border radiuses */
+  --br-3xl: 22px;
+  --br-4xs: 9px;
+  --br-12xs: 1px;
+  --br-mid: 17px;
+  --br-24xl: 43px;
+  --br-2xs: 11px;
+  --br-11xs: 2px;
+  --br-sm-2: 13.2px;
+  --br-xs: 12px;
+  --br-lg: 18px;
+}

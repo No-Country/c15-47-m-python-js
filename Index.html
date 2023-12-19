@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="body.css">
+  <title>BOOK STORE</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="img/logobook.png" alt="Logo de la librería">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Libros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Promociones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Suscripción</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header> 
+  <main>
+    <div id="carrusel">
+      <div class="slides">
+          <div class="slide">
+            <img src="imagen1.jpg" alt="Imagen 1" href="/producto/1"onclick="window.location.href='/producto/1'">
+          </div>
+          <div class="slide">
+              <img src="imagen2.jpg" alt="Imagen 2"href="/producto/2"onclick="window.location.href='/producto/2'">
+          </div>
+          <div class="slide">
+              <img src="imagen3.jpg" alt="Imagen 3"href="/producto/3"onclick="window.location.href='/producto/3'">
+          </div>
+          <div class="slide">
+              <img src="imagen4.jpg" alt="Imagen 4"href="/producto/4"onclick="window.location.href='/producto/4'">
+          </div>
+      </div>
+      <div class="navegacion">
+          <a class="prev" href="#">Anterior</a>
+          <a class="next" href="#">Siguiente</a>
+      <script>
+            $(document).ready(function() {
+                $('.slides .slide').mouseover(function() {
+                    $(this).addClass('active');
+                });
+        
+                $('.slides .slide').mouseout(function() {
+                    $(this).removeClass('active');
+                });
+            });
+      </script>
+      </div>
+  </div>
+    <section class="libros">
+      <h2>Libros</h2>
+      <ul>
+        {% for libro in libros %}
+        <li>
+          <a href="libros/1.html">
+            <img src="img/libro1.jpg" alt="Libro 1">
+            <h3>El hombre en busca de sentido</h3>
+            <p>Viktor Frankl</p>
+            <p>$200</p>
+          </a>
+        </li>
+        <li>
+          <a href="libros/2.html">
+            <img src="img/libro2.jpg" alt="Libro 2">
+            <h3>El código Da Vinci</h3>
+            <p>Dan Brown</p>
+            <p>$300</p>
+          </a>
+        </li>
+        <li>
+          <a href="libros/3.html">
+            <img src="img/libro3.jpg" alt="Libro 3">
+            <h3>Cien años de soledad</h3>
+            <p>Gabriel García Márquez</p>
+            <p>$400</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="carrito-compras">
+      <h2>Carrito de compras</h2>
+      <ul>
+        <li>
+          <img src="img/libro1.jpg" alt="Libro 1">
+          <p>El hombre en busca de sentido</p>
+          <p>$200</p>
+          <a href="#">Eliminar</a>
+        </li>
+        <li>
+          <img src="img/libro2.jpg" alt="Libro 2">
+          <p>El código Da Vinci</p>
+          <p>$300</p>
+          <a href="#">Eliminar</a>
+        </li>
+        <li>
+          <img src="img/libro3.jpg" alt="Libro 3">
+          <p>Cien años de soledad</p>
+          <p>$400</p>
+          <a href="#">Eliminar</a>
+        </li>
+      </ul>
+      <p>Total: $900</p>
+      <a href="#">Pagar</a>
+    </section>
+    <section class="promociones">
+      <h2>Promociones</h2>
+      <ul>
+        <li>
+          <img src="img/promocion.jpg" alt="Promoción navideña">
+          <p>¡Llévate 2 libros por el precio de 1!</p>
+          <p>Válido hasta el 31 de diciembre</p>
+        </li>
+      </ul>
+    </section>
+    <section class="suscripcion">
+      <h2>Suscríbete</h2>
+      <p>Recibe un libro gratis cada mes</p>
+      <input type="email" placeholder="Ingresa tu correo electrónico">
+      <button>Suscribirse</button>
+    </section>
+  </main>
+  <footer>
+    <p>Copyright © 2023 Librería Online</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,713 @@
+.crear-nueva-cuenta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+}
+.crear-nueva-cuenta-de-cliente {
+  position: absolute;
+  top: 135px;
+  left: 100px;
+  width: 361px;
+  height: 30px;
+  font-size: 25px;
+}
+.registro-child {
+  position: absolute;
+  top: 229px;
+  left: 734.73px;
+  width: 0;
+  height: 621px;
+  object-fit: cover;
+}
+.instance-child {
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-white);
+  border: 1px solid var(--quinto);
+  box-sizing: border-box;
+}
+.component-118-inner,
+.instance-child,
+.telefono1 {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.component-118-inner {
+  height: 100%;
+  right: 0;
+  bottom: 0;
+}
+.telefono1 {
+  font-weight: 500;
+  display: inline-block;
+}
+.component-118,
+.div,
+.telefono {
+  position: absolute;
+  height: 42.31%;
+  width: 31.95%;
+  top: 28.85%;
+  right: 56.55%;
+  bottom: 28.85%;
+  left: 11.49%;
+}
+.component-118,
+.div {
+  right: 10.52%;
+  left: 57.52%;
+}
+.component-118 {
+  height: 12.32%;
+  width: 58.95%;
+  top: 75.59%;
+  right: 0.01%;
+  bottom: 12.09%;
+  left: 41.04%;
+}
+.cod-area,
+.component-117,
+.div2 {
+  position: absolute;
+  height: 42.31%;
+  width: 42.22%;
+  top: 28.85%;
+  right: 45.98%;
+  bottom: 28.85%;
+  left: 11.8%;
+}
+.component-117,
+.div2 {
+  width: 20.43%;
+  right: 16.47%;
+  left: 63.1%;
+}
+.component-117 {
+  height: 12.32%;
+  width: 38.3%;
+  top: 75.59%;
+  right: 61.69%;
+  bottom: 12.09%;
+  left: 0;
+}
+.get-specials-birthdays {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-weight: 500;
+  display: inline-block;
+}
+.get-specials-birthdays-discou {
+  position: absolute;
+  height: 5.92%;
+  width: 50.43%;
+  top: 38.63%;
+  right: 46.08%;
+  bottom: 55.45%;
+  left: 3.49%;
+  color: var(--darkgreen);
+}
+.component-114-child,
+.nombre-completo {
+  position: absolute;
+  height: 42.31%;
+  width: 26.78%;
+  top: 28.85%;
+  right: 69.74%;
+  bottom: 28.85%;
+  left: 3.48%;
+}
+.component-114-child {
+  height: 21.15%;
+  width: 1.91%;
+  right: 66.09%;
+  bottom: 50%;
+  left: 32%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.component-114 {
+  position: absolute;
+  height: 12.32%;
+  width: 99.98%;
+  top: 0;
+  right: 0;
+  bottom: 87.68%;
+  left: 0.02%;
+}
+.fecha-de-nacimiento1 {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-weight: 500;
+  white-space: pre-wrap;
+  display: inline-block;
+}
+.component-115-child,
+.fecha-de-nacimiento {
+  position: absolute;
+  height: 42.31%;
+  width: 31%;
+  top: 30.77%;
+  right: 65.6%;
+  bottom: 26.92%;
+  left: 3.41%;
+}
+.component-115-child {
+  height: 21.15%;
+  width: 1.91%;
+  right: 61.8%;
+  bottom: 48.08%;
+  left: 36.29%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.component-115 {
+  position: absolute;
+  height: 12.32%;
+  width: 99.98%;
+  top: 24.64%;
+  right: 0;
+  bottom: 63.03%;
+  left: 0.02%;
+}
+.component-116-child,
+.direccin {
+  position: absolute;
+  height: 42.31%;
+  width: 14.26%;
+  top: 28.85%;
+  right: 82.26%;
+  bottom: 28.85%;
+  left: 3.48%;
+}
+.component-116-child {
+  height: 21.15%;
+  width: 1.91%;
+  right: 78.56%;
+  bottom: 50%;
+  left: 19.52%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.component-116 {
+  position: absolute;
+  height: 12.32%;
+  width: 99.98%;
+  top: 53.08%;
+  right: 0.02%;
+  bottom: 34.6%;
+  left: 0;
+}
+.campos-obligatorios {
+  position: absolute;
+  height: 100%;
+  width: 87.29%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 12.71%;
+}
+.component-119-child {
+  position: absolute;
+  height: 57.89%;
+  width: 6.08%;
+  top: 15.79%;
+  right: 93.92%;
+  bottom: 26.32%;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.component-119 {
+  position: absolute;
+  height: 4.5%;
+  width: 31.47%;
+  top: 95.5%;
+  right: 68.52%;
+  bottom: 0;
+  left: 0;
+  font-size: var(--font-size-base);
+  color: var(--tourquesemain);
+}
+.component-120 {
+  position: absolute;
+  top: 229px;
+  left: 100px;
+  width: 584.04px;
+  height: 422px;
+  color: var(--quinto);
+}
+.crear-cuenta1,
+.instance-child2 {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.instance-child2 {
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--br-23xl);
+  background-color: var(--tourquesemain);
+}
+.crear-cuenta1 {
+  display: inline-block;
+}
+.component-126,
+.crear-cuenta {
+  position: absolute;
+  height: 40.91%;
+  width: 33.1%;
+  top: 27.27%;
+  right: 36.91%;
+  bottom: 31.82%;
+  left: 30%;
+}
+.component-126 {
+  height: 7.87%;
+  width: 52.54%;
+  top: 92.13%;
+  right: 47.28%;
+  bottom: 0;
+  left: 0.18%;
+  box-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.25);
+  font-size: var(--font-size-mini);
+  color: var(--color-white);
+}
+.instance-child3 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--quinto);
+  box-sizing: border-box;
+}
+.component-124-inner {
+  position: absolute;
+  height: 65.38%;
+  width: 5.33%;
+  top: 0;
+  right: 94.67%;
+  bottom: 34.62%;
+  left: 0;
+}
+.component-124,
+.sign-up-for-emails-to-get-upda {
+  position: absolute;
+  height: 100%;
+  width: 92.83%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 7.17%;
+}
+.component-124 {
+  height: 7.87%;
+  width: 88.41%;
+  top: 51.88%;
+  right: 7.61%;
+  bottom: 40.25%;
+  left: 3.99%;
+  color: var(--darkgreen);
+}
+.component-121-child,
+.correo-electrnico {
+  position: absolute;
+  height: 42.31%;
+  width: 29.09%;
+  top: 28.85%;
+  right: 67.27%;
+  bottom: 28.85%;
+  left: 3.64%;
+}
+.component-121-child {
+  height: 21.15%;
+  width: 2%;
+  right: 63.45%;
+  bottom: 50%;
+  left: 34.55%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.component-121 {
+  position: absolute;
+  height: 9.3%;
+  width: 99.64%;
+  top: 0;
+  right: 0.36%;
+  bottom: 90.7%;
+  left: 0;
+}
+.component-122-child,
+.contrasea {
+  position: absolute;
+  height: 42.31%;
+  width: 18.18%;
+  top: 28.85%;
+  right: 78.18%;
+  bottom: 28.85%;
+  left: 3.64%;
+}
+.component-122-child {
+  height: 21.15%;
+  width: 2%;
+  right: 74.33%;
+  bottom: 50%;
+  left: 23.67%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.component-122 {
+  position: absolute;
+  height: 9.3%;
+  width: 99.64%;
+  top: 18.6%;
+  right: 0.36%;
+  bottom: 72.09%;
+  left: 0;
+}
+.component-123-child,
+.repetir-contrasea {
+  position: absolute;
+  height: 42.31%;
+  width: 29.82%;
+  top: 28.85%;
+  right: 66.55%;
+  bottom: 28.85%;
+  left: 3.64%;
+}
+.component-123-child {
+  height: 21.15%;
+  width: 2%;
+  right: 62.72%;
+  bottom: 50%;
+  left: 35.28%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.component-123 {
+  position: absolute;
+  height: 9.3%;
+  width: 99.64%;
+  top: 35.42%;
+  right: 0;
+  bottom: 55.28%;
+  left: 0.36%;
+}
+.component-125-inner {
+  position: absolute;
+  height: 65.38%;
+  width: 5.31%;
+  top: 0;
+  right: 94.69%;
+  bottom: 34.62%;
+  left: 0;
+}
+.privacy-policy {
+  text-decoration: underline;
+}
+.i-agree-to-book-stores-privac {
+  position: absolute;
+  height: 100%;
+  width: 92.45%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 7.55%;
+}
+.component-125-child {
+  position: absolute;
+  height: 25%;
+  width: 2.24%;
+  top: 52.27%;
+  right: 81.63%;
+  bottom: 22.73%;
+  left: 16.12%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.component-125 {
+  position: absolute;
+  height: 7.87%;
+  width: 88.77%;
+  top: 67.62%;
+  right: 7.25%;
+  bottom: 24.51%;
+  left: 3.99%;
+  color: var(--color-gray-100);
+}
+.component-127 {
+  position: absolute;
+  top: 232px;
+  left: 779px;
+  width: 560.59px;
+  height: 559px;
+  color: var(--quinto);
+}
+.fi-rr-book-icon {
+  position: absolute;
+  height: 82.76%;
+  width: 1.95%;
+  top: 8.62%;
+  right: 98.05%;
+  bottom: 8.62%;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.book-store {
+  position: absolute;
+  top: 0;
+  left: 2.28%;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-kaisei-tokumin);
+}
+.categoras,
+.log-in,
+.mi-carrito,
+.perfil {
+  position: absolute;
+  top: 12.07%;
+  left: 29.43%;
+  font-weight: 600;
+}
+.log-in,
+.mi-carrito,
+.perfil {
+  left: 42.52%;
+}
+.log-in,
+.perfil {
+  left: 54.88%;
+}
+.log-in {
+  left: 89.19%;
+}
+.fi-rr-menu-burger-icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.fi-rr-menu-burger-wrapper {
+  position: absolute;
+  height: 82.76%;
+  width: 1.95%;
+  top: 8.62%;
+  right: 0;
+  bottom: 8.62%;
+  left: 98.05%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.fi-rr-book-parent {
+  position: absolute;
+  height: 28.16%;
+  width: 85.42%;
+  top: 35.92%;
+  right: 7.29%;
+  bottom: 35.92%;
+  left: 7.29%;
+}
+.component-14 {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 720px);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15.8px);
+  width: 1440px;
+  height: 103px;
+  font-family: var(--tipografas-web-nav-bar);
+}
+.registro {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 1023px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--tipografas-web-nav-bar-size);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+.group-child,
+.title {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.group-child {
+  border-radius: var(--br-2xs);
+  background-color: var(--color-white);
+  width: 649px;
+  height: 427.76px;
+}
+.title {
+  height: 100%;
+  width: 100%;
+  line-height: 209.15%;
+  display: inline-block;
+}
+.arte-y-fotografa,
+.biografas-y-memorias,
+.biografas-y-memorias1 {
+  position: absolute;
+  top: 53px;
+  left: 57px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias,
+.biografas-y-memorias1 {
+  top: 90px;
+}
+.biografas-y-memorias1 {
+  top: 127px;
+}
+.arte-y-fotografa1,
+.biografas-y-memorias2,
+.biografas-y-memorias3 {
+  position: absolute;
+  top: 164px;
+  left: 57px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias2,
+.biografas-y-memorias3 {
+  top: 201px;
+}
+.biografas-y-memorias3 {
+  top: 238px;
+}
+.arte-y-fotografa2,
+.biografas-y-memorias4,
+.biografas-y-memorias5 {
+  position: absolute;
+  top: 275px;
+  left: 57px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias4,
+.biografas-y-memorias5 {
+  top: 312px;
+}
+.biografas-y-memorias5 {
+  top: 349px;
+}
+.arte-y-fotografa3,
+.biografas-y-memorias6,
+.biografas-y-memorias7 {
+  position: absolute;
+  top: 53px;
+  left: 354px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias6,
+.biografas-y-memorias7 {
+  top: 90px;
+}
+.biografas-y-memorias7 {
+  top: 127px;
+}
+.arte-y-fotografa4,
+.biografas-y-memorias8,
+.biografas-y-memorias9 {
+  position: absolute;
+  top: 164px;
+  left: 354px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias8,
+.biografas-y-memorias9 {
+  top: 201px;
+}
+.biografas-y-memorias9 {
+  top: 238px;
+}
+.biografas-y-memorias10,
+.biografas-y-memorias11,
+.biografas-y-memorias12 {
+  position: absolute;
+  top: 275px;
+  left: 354px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias11,
+.biografas-y-memorias12 {
+  top: 312px;
+}
+.biografas-y-memorias12 {
+  top: 349px;
+}
+.frame-child,
+.rectangle-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 649px;
+  height: 427.76px;
+}
+.frame-child {
+  top: -15px;
+  left: 48px;
+  border-radius: 2px;
+  width: 31px;
+  height: 31px;
+  object-fit: cover;
+}
+.group-parent {
+  position: relative;
+  border-radius: var(--br-2xs);
+  background-color: var(--color-white);
+  width: 648px;
+  height: 431px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  text-align: left;
+  font-size: var(--font-size-mid);
+  color: var(--color-darkgray);
+  font-family: var(--font-rubik);
+}
