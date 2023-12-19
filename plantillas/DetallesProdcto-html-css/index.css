@@ -1,0 +1,1304 @@
+.detalle-en-child {
+  position: absolute;
+  top: 587px;
+  left: 110px;
+  width: 124px;
+  height: 191px;
+}
+.div,
+.div1,
+.holly,
+.popular,
+.terror {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 500;
+}
+.div,
+.div1,
+.holly,
+.terror {
+  left: 88px;
+}
+.div1,
+.holly,
+.terror {
+  left: 189px;
+}
+.holly,
+.terror {
+  left: 116px;
+}
+.holly {
+  left: 217px;
+  color: var(--color-black);
+}
+.popular-parent {
+  position: absolute;
+  top: 173px;
+  left: 100px;
+  width: 266px;
+  height: 24px;
+  color: var(--color-darkgray-200);
+  font-family: var(--font-inter);
+}
+.detalle-book-atm-child {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-lgi);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.detalle-book-atm {
+  position: absolute;
+  top: 227px;
+  left: 100px;
+  width: 489px;
+  height: 675px;
+}
+.reviews,
+.reviews1 {
+  position: absolute;
+  top: 0;
+}
+.reviews1 {
+  left: 0;
+  font-weight: 600;
+}
+.reviews {
+  height: 100%;
+  width: 87.44%;
+  right: 0;
+  bottom: 0;
+  left: 12.56%;
+}
+.component-97-inner,
+.instance-child {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.instance-child {
+  width: 100%;
+  right: 0;
+  background-color: var(--tourquesemain);
+}
+.component-97-inner {
+  width: 2.79%;
+  right: 97.21%;
+}
+.component-97 {
+  position: absolute;
+  top: 1918px;
+  left: 100px;
+  width: 215px;
+  height: 65px;
+  font-size: var(--font-size-29xl);
+}
+.footer-rectangle-atm-child {
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  background-color: var(--darkgreen);
+}
+.categories,
+.footer-rectangle-atm,
+.footer-rectangle-atm-child {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.footer-rectangle-atm {
+  width: 100%;
+  right: 0;
+  bottom: 0;
+}
+.categories {
+  width: 96.83%;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+}
+.footer-listtitle-categories {
+  position: absolute;
+  height: 6.72%;
+  width: 11.66%;
+  top: 0;
+  right: 88.34%;
+  bottom: 93.28%;
+  left: 0;
+}
+.arte-y-fotografa {
+  margin: 0;
+}
+.title {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  line-height: 209.15%;
+  display: inline-block;
+}
+.footer-list-categories-atm {
+  position: absolute;
+  height: 88.81%;
+  width: 22.02%;
+  top: 11.19%;
+  right: 77.98%;
+  bottom: 0;
+  left: 0;
+  font-size: var(--font-size-mid);
+}
+.account {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.footer-account-atm,
+.footer-titleaccount-atm {
+  position: absolute;
+  height: 6.72%;
+  width: 8.88%;
+  top: 0;
+  right: 57.63%;
+  bottom: 93.28%;
+  left: 33.49%;
+}
+.footer-account-atm {
+  height: 25.62%;
+  width: 16.74%;
+  top: 11.19%;
+  right: 49.77%;
+  bottom: 63.18%;
+  font-size: var(--font-size-mid);
+}
+.footer-list-socialmedia,
+.footer-socialmedia-atm {
+  position: absolute;
+  height: 5.22%;
+  width: 13.41%;
+  top: 0;
+  right: 30.71%;
+  bottom: 94.78%;
+  left: 55.87%;
+}
+.footer-socialmedia-atm {
+  height: 34.83%;
+  top: 11.19%;
+  bottom: 53.98%;
+  font-size: var(--font-size-mid);
+}
+.footer-legal-atm,
+.footer-list-legal {
+  position: absolute;
+  height: 6.72%;
+  width: 5.74%;
+  top: 0;
+  right: 13.04%;
+  bottom: 93.28%;
+  left: 81.22%;
+}
+.footer-legal-atm {
+  height: 28.11%;
+  width: 18.78%;
+  top: 11.19%;
+  right: 0;
+  bottom: 60.7%;
+  font-size: var(--font-size-mid);
+}
+.component-68-icon {
+  position: absolute;
+  height: 50.5%;
+  width: 23.4%;
+  top: 50%;
+  right: 1.48%;
+  bottom: -0.5%;
+  left: 75.12%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.component-68 {
+  position: absolute;
+  height: 82.04%;
+  width: 74.97%;
+  top: 8.98%;
+  right: 12.48%;
+  bottom: 8.98%;
+  left: 12.55%;
+}
+.footer-organism {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1442px;
+  height: 490px;
+  color: var(--color-white);
+}
+.in-stock {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-weight: 300;
+  display: inline-block;
+}
+.instock-atm {
+  position: absolute;
+  height: 10.05%;
+  width: 24.96%;
+  top: 0;
+  right: 70.77%;
+  bottom: 89.95%;
+  left: 4.28%;
+}
+.envo-gratis-a {
+  position: absolute;
+  width: 78.38%;
+  top: 0;
+  left: 0.02%;
+  display: inline-block;
+}
+.enviogratis-atm {
+  position: absolute;
+  height: 12.56%;
+  width: 72.31%;
+  top: 18.59%;
+  right: 23.39%;
+  bottom: 68.84%;
+  left: 4.3%;
+  font-size: var(--tipografas-web-nav-bar-size);
+  color: var(--tourquesemain);
+}
+.aadircarrito-rectangle-atm-child {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-21xl);
+  background-color: var(--tourquesemain);
+}
+.aadircarrito-rectangle-atm {
+  position: absolute;
+  height: 22.11%;
+  width: 50.62%;
+  top: 58.79%;
+  right: 45.45%;
+  bottom: 19.1%;
+  left: 3.92%;
+  cursor: pointer;
+}
+.agregar-al-carrito {
+  position: absolute;
+  height: 142.86%;
+  width: 105.51%;
+  top: 0;
+  left: -3.32%;
+  display: inline-block;
+}
+.aadircarrito-text-atm {
+  position: absolute;
+  height: 7.04%;
+  width: 21.86%;
+  top: 66.33%;
+  right: 59.71%;
+  bottom: 26.63%;
+  left: 18.42%;
+  font-size: var(--font-size-mini);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+.detalle2-atm-child {
+  position: absolute;
+  height: 0.5%;
+  width: 100.17%;
+  top: 99.75%;
+  right: -0.09%;
+  bottom: -0.25%;
+  left: -0.09%;
+  border-top: 1px solid var(--color-gainsboro);
+  box-sizing: border-box;
+}
+.detalle2-atm {
+  position: absolute;
+  height: 30.43%;
+  width: 99.29%;
+  top: 69.57%;
+  right: 0.71%;
+  bottom: 0;
+  left: 0;
+}
+.formato {
+  position: relative;
+  font-weight: 600;
+}
+.fi-rr-book-icon {
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.fi-rr-book-icon,
+.fsico {
+  position: relative;
+}
+.fi-rr-book-parent {
+  background-color: var(--color-white);
+  color: var(--color-darkslategray-100);
+}
+.fi-rr-book-parent,
+.fi-rr-tablet-parent {
+  border-radius: var(--br-mini);
+  border: 1px solid var(--color-silver);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-lg) var(--padding-9xl);
+  gap: var(--gap-3xs);
+}
+.formato-parent,
+.frame-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+  font-size: var(--tipografas-web-nav-bar-size);
+  color: var(--color-darkgray-300);
+}
+.formato-parent {
+  position: absolute;
+  height: 16.51%;
+  width: 86.73%;
+  top: 50%;
+  right: 9.03%;
+  bottom: 33.49%;
+  left: 4.25%;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  font-size: var(--font-size-9xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+.harry-potter {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: inline-block;
+}
+.harry-title-atm {
+  position: absolute;
+  height: 24.11%;
+  width: 54.14%;
+  top: 12.06%;
+  right: 45.86%;
+  bottom: 63.83%;
+  left: 0;
+  font-size: var(--font-size-31xl);
+}
+.autor-subtitle-atm,
+.por-jk-rowling {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.autor-subtitle-atm {
+  height: 10.64%;
+  width: 30.02%;
+  top: 39.36%;
+  right: 69.98%;
+  bottom: 50%;
+  font-size: var(--font-size-3xl);
+}
+.iconheart {
+  position: absolute;
+  height: 10.28%;
+  width: 5.89%;
+  top: 1.77%;
+  right: 9.58%;
+  bottom: 87.94%;
+  left: 84.53%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.reviews2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-decoration: underline;
+  font-weight: 300;
+  display: inline-block;
+}
+.reviews-atm {
+  position: absolute;
+  height: 7.09%;
+  width: 24.9%;
+  top: 64.18%;
+  right: 43.44%;
+  bottom: 28.72%;
+  left: 31.66%;
+  font-size: var(--tipografas-web-subttulos-size);
+  color: var(--tourquesemain);
+  font-family: var(--font-inter);
+}
+.estrellas-atm-icon {
+  position: absolute;
+  height: 9.57%;
+  width: 27.75%;
+  top: 62.77%;
+  right: 72.25%;
+  bottom: 27.66%;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.buttonshare-child {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-81xl);
+  background-color: var(--gris);
+}
+.vector-icon {
+  position: absolute;
+  top: calc(50% - 9px);
+  left: calc(50% - 6.67px);
+  width: 13px;
+  height: 17px;
+  object-fit: cover;
+}
+.buttonshare1 {
+  height: 100%;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-3xs);
+}
+.buttonshare,
+.buttonshare1,
+.div2 {
+  position: absolute;
+  top: 0;
+}
+.buttonshare {
+  height: 13.48%;
+  width: 7%;
+  right: 0;
+  bottom: 86.52%;
+  left: 93%;
+}
+.div2 {
+  width: 100%;
+  left: 0;
+  font-weight: 600;
+  display: inline-block;
+}
+.detalle-precio-atm {
+  position: absolute;
+  height: 13.48%;
+  width: 22.84%;
+  top: 86.52%;
+  right: 77.16%;
+  bottom: 0;
+  left: 0;
+  font-size: var(--font-size-9xl);
+}
+.bestseller-nr-1 {
+  position: relative;
+  width: 85px;
+  height: 15px;
+}
+.bestseller-nr-1-wrapper,
+.bestseller-nr-12 {
+  position: absolute;
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+.bestseller-nr-1-wrapper {
+  height: 8.87%;
+  width: 23.2%;
+  top: 0;
+  right: 76.43%;
+  bottom: 91.13%;
+  left: 0.37%;
+  border-radius: 0 13.15px 0 13.15px;
+  background-color: var(--color-gainsboro);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-8xs) var(--padding-5xs);
+  box-sizing: border-box;
+}
+.bestseller-nr-12 {
+  height: 5.32%;
+  width: 15.12%;
+  top: 1.77%;
+  right: 54.86%;
+  bottom: 92.91%;
+  left: 30.02%;
+}
+.detalle-atm {
+  position: absolute;
+  height: 43.12%;
+  width: 96.11%;
+  top: 0;
+  right: 0;
+  bottom: 56.88%;
+  left: 3.89%;
+  font-size: var(--font-size-xs);
+  color: var(--darkgreen);
+}
+.component-90 {
+  position: absolute;
+  top: 236px;
+  left: 730px;
+  width: 585px;
+  height: 654px;
+  color: var(--color-lightseagreen-100);
+}
+.descripcin,
+.the-stephen-king-fan-favorite {
+  position: absolute;
+  height: 67.78%;
+  width: 100%;
+  top: 32.22%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.descripcin {
+  height: 100%;
+  width: 90.8%;
+  top: 0;
+  left: 9.2%;
+  display: none;
+}
+.component-91,
+.component-91-inner {
+  position: absolute;
+  height: 75.93%;
+  width: 2.4%;
+  top: 7.41%;
+  right: 97.6%;
+  bottom: 16.67%;
+  left: 0;
+}
+.component-91 {
+  height: 22.59%;
+  width: 51.65%;
+  top: 0;
+  right: 47.52%;
+  bottom: 77.41%;
+  left: 0.83%;
+  display: none;
+  font-size: var(--font-size-29xl);
+}
+.component-102 {
+  position: absolute;
+  top: 1005px;
+  left: 100px;
+  width: 484px;
+  height: 239px;
+}
+.popular-rectangle-atm,
+.popular-text-atm,
+.popular-text-atm1 {
+  position: absolute;
+  height: 100%;
+  width: 125.95%;
+  top: 0;
+  right: -25.95%;
+  bottom: 0;
+  left: 0;
+}
+.popular-rectangle-atm,
+.popular-text-atm {
+  width: 87.26%;
+  right: 0;
+  left: 12.74%;
+}
+.popular-rectangle-atm {
+  width: 2.83%;
+  right: 97.17%;
+  left: 0;
+}
+.component-58 {
+  position: absolute;
+  top: 1005px;
+  left: 100px;
+  width: 212px;
+  height: 65px;
+  font-size: var(--font-size-29xl);
+}
+.publisher {
+  font-weight: 300;
+}
+.span {
+  font-family: var(--tipografas-web-nav-bar);
+}
+.publisher-scribner-publication-container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  line-height: 164.1%;
+  white-space: pre-wrap;
+  display: inline-block;
+}
+.caractersticas,
+.publisher-scribner-publication {
+  position: absolute;
+  height: 63.77%;
+  width: 93.33%;
+  top: 36.23%;
+  right: 6.67%;
+  bottom: 0;
+  left: 0;
+}
+.caractersticas {
+  height: 100%;
+  width: 92.56%;
+  top: 0;
+  right: 0;
+  left: 7.44%;
+}
+.component-93,
+.component-93-inner {
+  position: absolute;
+  height: 75.93%;
+  width: 1.94%;
+  top: 7.41%;
+  right: 98.06%;
+  bottom: 16.67%;
+  left: 0;
+}
+.component-93 {
+  height: 26.09%;
+  width: 82.4%;
+  top: 0;
+  right: 17.6%;
+  bottom: 73.91%;
+  display: none;
+  font-size: var(--font-size-29xl);
+  color: var(--darkgreen);
+}
+.component-103 {
+  position: absolute;
+  top: 1005px;
+  left: 758px;
+  width: 375px;
+  height: 207px;
+  color: var(--tourquesemain);
+}
+.component-105 {
+  position: absolute;
+  top: 1003px;
+  left: 758px;
+  width: 212px;
+  height: 65px;
+  font-size: var(--font-size-29xl);
+}
+.rectangle-div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-mid);
+  background-color: var(--color-lightseagreen-200);
+}
+.detalle-card-foto-atm-icon {
+  position: absolute;
+  height: 22.1%;
+  width: 17.7%;
+  top: 11.16%;
+  right: 74.74%;
+  bottom: 66.74%;
+  left: 7.56%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.name,
+.name1 {
+  position: absolute;
+}
+.name1 {
+  top: 0;
+  left: 0;
+  font-weight: 500;
+}
+.name {
+  height: 7.3%;
+  width: 13.57%;
+  top: 13.52%;
+  right: 54.81%;
+  bottom: 79.18%;
+  left: 31.62%;
+}
+.instance-child3,
+.instance-child4,
+.star-icon {
+  position: absolute;
+  height: 100%;
+  width: 17.28%;
+  top: 0;
+  right: 82.72%;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-12xs);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.instance-child3,
+.instance-child4 {
+  right: 20.94%;
+  left: 61.78%;
+}
+.instance-child4 {
+  right: 0;
+  left: 82.72%;
+}
+.star-parent {
+  position: absolute;
+  height: 7.08%;
+  width: 32.82%;
+  top: 23.82%;
+  right: 35.57%;
+  bottom: 69.1%;
+  left: 31.62%;
+}
+.component-98,
+.lorem-ipsum-is-simply-dummy-te {
+  position: absolute;
+  height: 28.97%;
+  width: 85.4%;
+  top: 41.85%;
+  right: 7.04%;
+  bottom: 29.18%;
+  left: 7.56%;
+  font-size: var(--tipografas-web-subttulos-size);
+  font-family: var(--tipografas-web-nav-bar);
+}
+.component-98 {
+  height: 100%;
+  width: 46.94%;
+  top: 0;
+  right: 53.06%;
+  bottom: 0;
+  left: 0;
+  font-size: var(--font-size-9xl);
+  font-family: var(--font-inter);
+}
+.lorem-ipsum-is-simply-dummy-te1,
+.name2 {
+  position: absolute;
+  height: 37.67%;
+  width: 63.71%;
+  top: 46.51%;
+  right: 7.72%;
+  bottom: 15.81%;
+  left: 28.57%;
+}
+.name2 {
+  height: 15.81%;
+  width: 12.97%;
+  top: 24.65%;
+  right: 58.46%;
+  bottom: 59.53%;
+  font-size: var(--font-size-9xl);
+  font-family: var(--font-inter);
+}
+.component-100-child,
+.detalle-card-foto3-atm-icon {
+  position: absolute;
+  height: 47.91%;
+  width: 16.91%;
+  top: 20%;
+  right: 78%;
+  bottom: 32.09%;
+  left: 5.09%;
+}
+.component-100-child {
+  border-radius: 50%;
+  background-color: var(--darkgreen);
+}
+.detalle-card-foto3-atm-icon {
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.component-100,
+.star-group {
+  position: absolute;
+  height: 17.4%;
+  width: 31.36%;
+  top: 23.72%;
+  right: 17.24%;
+  bottom: 58.88%;
+  left: 51.4%;
+}
+.component-100 {
+  height: 46.14%;
+  width: 49.11%;
+  top: 53.86%;
+  right: 0;
+  bottom: 0;
+  left: 50.89%;
+}
+.reviews-stars-atm-inner,
+.reviews-stars-atm-item {
+  position: absolute;
+  height: 100%;
+  width: 16.75%;
+  top: 0;
+  right: 62.83%;
+  bottom: 0;
+  left: 20.42%;
+  border-radius: var(--br-12xs);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.reviews-stars-atm-inner {
+  width: 17.28%;
+  right: 41.36%;
+  left: 41.36%;
+}
+.component-99,
+.reviews-stars-atm {
+  position: absolute;
+  height: 15.35%;
+  width: 31.36%;
+  top: 25.12%;
+  right: 17.08%;
+  bottom: 59.53%;
+  left: 51.56%;
+}
+.component-99 {
+  height: 46.14%;
+  width: 49.11%;
+  top: 0;
+  right: 0;
+  bottom: 53.86%;
+  left: 50.89%;
+}
+.component-101 {
+  position: absolute;
+  top: 2056px;
+  left: 100px;
+  width: 1240px;
+  height: 466px;
+}
+.lf-7-2,
+.main-icon {
+  position: absolute;
+  height: 121.78%;
+  width: 150.99%;
+  top: -10.8%;
+  right: -27.36%;
+  bottom: -10.97%;
+  left: -23.63%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: contain;
+}
+.lf-7-2 {
+  height: 90.48%;
+  width: 73.82%;
+  top: 3.97%;
+  right: 14.14%;
+  bottom: 5.56%;
+  left: 12.04%;
+  object-fit: cover;
+}
+.card-book-mockupmadre-atm {
+  position: relative;
+  width: 191px;
+  height: 252px;
+}
+.by-lauren-roberts {
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-weight: 300;
+}
+.powerless-parent {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.div3 {
+  position: relative;
+  font-weight: 600;
+  color: var(--tourquesemain);
+}
+.component-44 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-sm);
+}
+.component-44-parent {
+  position: absolute;
+  height: 74.63%;
+  width: 100%;
+  top: 25.37%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.productos-similares {
+  position: absolute;
+  height: 100%;
+  width: 94.31%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 5.69%;
+}
+.component-95,
+.component-95-inner {
+  position: absolute;
+  height: 75.93%;
+  width: 1.49%;
+  top: 7.41%;
+  right: 98.51%;
+  bottom: 16.67%;
+  left: 0;
+}
+.component-95 {
+  height: 11.42%;
+  width: 32.58%;
+  top: 0;
+  right: 67.42%;
+  bottom: 88.58%;
+  display: none;
+  font-size: var(--font-size-21xl);
+  color: var(--color-black);
+}
+.component-104,
+.component-971 {
+  position: absolute;
+  top: 1344px;
+  left: 100px;
+}
+.component-971 {
+  width: 1240px;
+  height: 473px;
+  color: var(--secundario);
+}
+.component-104 {
+  width: 212px;
+  height: 65px;
+  font-size: var(--font-size-29xl);
+}
+.fi-rr-arrow-left-icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.btn-regresar,
+.fi-rr-arrow-left-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.fi-rr-arrow-left-parent {
+  flex-shrink: 0;
+  gap: var(--gap-8xs);
+}
+.btn-regresar {
+  position: absolute;
+  top: 136px;
+  left: 100px;
+  border-radius: var(--br-lg);
+  background-color: var(--color-white);
+  border: 1px solid var(--gray);
+  padding: var(--padding-5xs) var(--padding-2xl);
+  font-size: var(--font-size-smi);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+.fi-rr-book-icon1 {
+  position: absolute;
+  height: 82.76%;
+  width: 1.95%;
+  top: 8.62%;
+  right: 98.05%;
+  bottom: 8.62%;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.book-store {
+  position: absolute;
+  top: 0;
+  left: 2.28%;
+  font-size: var(--tipografas-web-subttulos-size);
+  font-family: var(--font-kaisei-tokumin);
+}
+.categoras,
+.log-in,
+.mi-carrito,
+.perfil {
+  position: absolute;
+  top: 12.07%;
+  left: 29.43%;
+  font-weight: 600;
+}
+.log-in,
+.mi-carrito,
+.perfil {
+  left: 42.52%;
+}
+.log-in,
+.perfil {
+  left: 54.88%;
+}
+.log-in {
+  left: 89.19%;
+}
+.fi-rr-menu-burger-wrapper {
+  position: absolute;
+  height: 82.76%;
+  width: 1.95%;
+  top: 8.62%;
+  right: 0;
+  bottom: 8.62%;
+  left: 98.05%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.fi-rr-book-group {
+  position: absolute;
+  height: 28.16%;
+  width: 85.42%;
+  top: 35.92%;
+  right: 7.29%;
+  bottom: 35.92%;
+  left: 7.29%;
+}
+.component-14 {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 720px);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15.8px);
+  width: 1440px;
+  height: 103px;
+  font-size: var(--tipografas-web-nav-bar-size);
+  color: var(--color-black);
+}
+.detalle-en {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 3147px;
+  overflow-y: auto;
+  text-align: left;
+  font-size: var(--tipografas-web-subttulos-size);
+  color: var(--darkgreen);
+  font-family: var(--tipografas-web-nav-bar);
+}
+.group-child,
+.title4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.group-child {
+  border-radius: var(--br-2xs);
+  background-color: var(--color-white);
+  width: 649px;
+  height: 427.76px;
+}
+.title4 {
+  height: 100%;
+  width: 100%;
+  line-height: 209.15%;
+  display: inline-block;
+}
+.arte-y-fotografa1,
+.biografas-y-memorias1,
+.biografas-y-memorias2 {
+  position: absolute;
+  top: 53px;
+  left: 57px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias1,
+.biografas-y-memorias2 {
+  top: 90px;
+}
+.biografas-y-memorias2 {
+  top: 127px;
+}
+.arte-y-fotografa2,
+.biografas-y-memorias3,
+.biografas-y-memorias4 {
+  position: absolute;
+  top: 164px;
+  left: 57px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias3,
+.biografas-y-memorias4 {
+  top: 201px;
+}
+.biografas-y-memorias4 {
+  top: 238px;
+}
+.arte-y-fotografa3,
+.biografas-y-memorias5,
+.biografas-y-memorias6 {
+  position: absolute;
+  top: 275px;
+  left: 57px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias5,
+.biografas-y-memorias6 {
+  top: 312px;
+}
+.biografas-y-memorias6 {
+  top: 349px;
+}
+.arte-y-fotografa4,
+.biografas-y-memorias7,
+.biografas-y-memorias8 {
+  position: absolute;
+  top: 53px;
+  left: 354px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias7,
+.biografas-y-memorias8 {
+  top: 90px;
+}
+.biografas-y-memorias8 {
+  top: 127px;
+}
+.arte-y-fotografa5,
+.biografas-y-memorias10,
+.biografas-y-memorias9 {
+  position: absolute;
+  top: 164px;
+  left: 354px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias10,
+.biografas-y-memorias9 {
+  top: 201px;
+}
+.biografas-y-memorias10 {
+  top: 238px;
+}
+.biografas-y-memorias11,
+.biografas-y-memorias12,
+.biografas-y-memorias13 {
+  position: absolute;
+  top: 275px;
+  left: 354px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias12,
+.biografas-y-memorias13 {
+  top: 312px;
+}
+.biografas-y-memorias13 {
+  top: 349px;
+}
+.frame-child,
+.rectangle-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 649px;
+  height: 427.76px;
+}
+.frame-child {
+  top: -15px;
+  left: 48px;
+  border-radius: 2px;
+  width: 31px;
+  height: 31px;
+  object-fit: cover;
+}
+.group-parent {
+  position: relative;
+  border-radius: var(--br-2xs);
+  background-color: var(--color-white);
+  width: 648px;
+  height: 431px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  text-align: left;
+  font-size: var(--font-size-mid);
+  color: var(--color-darkgray-100);
+  font-family: var(--font-rubik);
+}

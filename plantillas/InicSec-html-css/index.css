@@ -1,0 +1,439 @@
+.inicio-de-sesin {
+  position: absolute;
+  top: 132px;
+  left: 100px;
+  font-size: 25px;
+  font-weight: 600;
+}
+.group-child,
+.group-item {
+  position: absolute;
+  box-sizing: border-box;
+}
+.group-child {
+  top: -0.5px;
+  left: 631.12px;
+  border-right: 1px solid var(--color-black);
+  width: 1px;
+  height: 622px;
+}
+.group-item {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-11xl);
+  background-color: var(--color-white);
+  border: 1px solid var(--quinto);
+  width: 581.09px;
+  height: 52px;
+}
+.email {
+  position: absolute;
+  top: 15px;
+  left: 20.21px;
+  font-weight: 500;
+  display: inline-block;
+  width: 46.49px;
+}
+.rectangle-parent {
+  position: absolute;
+  top: 78px;
+  left: 6.06px;
+  width: 581.09px;
+  height: 52px;
+}
+.contrasea {
+  position: absolute;
+  top: 15px;
+  left: 21.22px;
+  font-weight: 500;
+  display: inline-block;
+  width: 101.06px;
+}
+.rectangle-div,
+.rectangle-group {
+  position: absolute;
+  top: 161px;
+  left: 6.06px;
+  width: 581.09px;
+  height: 52px;
+}
+.rectangle-div {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-23xl);
+  background-color: var(--tourquesemain);
+  width: 154.62px;
+  height: 44px;
+}
+.entrar {
+  position: absolute;
+  top: 13px;
+  left: 53.56px;
+  display: inline-block;
+  width: 47.5px;
+}
+.rectangle-container {
+  position: absolute;
+  top: 250px;
+  left: 6.06px;
+  box-shadow: 2px 2px 2.3px rgba(0, 0, 0, 0.25);
+  width: 154.62px;
+  height: 44px;
+  font-size: var(--font-size-mini);
+  color: var(--color-white);
+}
+.group-child1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-23xl);
+  background-color: var(--tourquesemain);
+  width: 198.08px;
+  height: 44px;
+}
+.crear-cuenta {
+  position: absolute;
+  top: 13px;
+  left: 53.56px;
+  display: inline-block;
+  width: 103.08px;
+}
+.group-div {
+  position: absolute;
+  top: 250px;
+  left: 727.63px;
+  box-shadow: 2px 2px 2.3px rgba(0, 0, 0, 0.25);
+  width: 198.08px;
+  height: 44px;
+  cursor: pointer;
+  font-size: var(--font-size-mini);
+  color: var(--color-white);
+}
+.clientes-registrados {
+  top: 12px;
+  left: 11.12px;
+  font-size: var(--font-size-3xl);
+  color: var(--color-gray-100);
+  width: 256.69px;
+}
+.clientes-registrados,
+.nuevos-clientes,
+.olvid-su-contrasea {
+  position: absolute;
+  font-weight: 500;
+  display: inline-block;
+  height: 44px;
+}
+.nuevos-clientes {
+  top: 12px;
+  left: 727.63px;
+  font-size: var(--font-size-3xl);
+  color: var(--color-gray-100);
+  width: 256.69px;
+}
+.olvid-su-contrasea {
+  top: 259px;
+  left: 191px;
+  text-decoration: underline;
+  width: 206.16px;
+}
+.campos-obligatorios {
+  top: 326px;
+  left: 17.18px;
+  font-size: 16px;
+  color: var(--tourquesemain);
+  width: 159.67px;
+}
+.campos-obligatorios,
+.crea-una-cuenta,
+.leer-mas-sobre {
+  position: absolute;
+  font-weight: 500;
+  display: inline-block;
+}
+.leer-mas-sobre {
+  top: 180px;
+  left: 723.59px;
+  text-decoration: underline;
+  width: 516.41px;
+  height: 44px;
+}
+.crea-una-cuenta {
+  top: 78px;
+  left: 727.63px;
+  color: var(--color-gray-100);
+  width: 457.8px;
+  height: 66px;
+}
+.frame-icon,
+.group-child2,
+.group-child3 {
+  position: absolute;
+  top: 328px;
+  left: 0;
+  width: 11.12px;
+  height: 11px;
+  object-fit: cover;
+}
+.group-child2,
+.group-child3 {
+  top: 176px;
+  left: 139.46px;
+}
+.group-child3 {
+  top: 93px;
+  left: 83.88px;
+}
+.line-parent {
+  position: absolute;
+  top: 229px;
+  left: 100px;
+  width: 1240px;
+  height: 621px;
+  color: var(--quinto);
+}
+.fi-rr-book-icon {
+  position: absolute;
+  height: 82.76%;
+  width: 1.95%;
+  top: 8.62%;
+  right: 98.05%;
+  bottom: 8.62%;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.book-store {
+  position: absolute;
+  top: 0;
+  left: 2.28%;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-kaisei-tokumin);
+}
+.categoras,
+.log-in1,
+.mi-carrito,
+.perfil {
+  position: absolute;
+  top: 12.07%;
+  left: 29.43%;
+  font-weight: 600;
+}
+.log-in1,
+.mi-carrito,
+.perfil {
+  left: 42.52%;
+}
+.log-in1,
+.perfil {
+  left: 54.88%;
+}
+.log-in1 {
+  left: 89.19%;
+}
+.fi-rr-menu-burger-icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.fi-rr-menu-burger-wrapper {
+  position: absolute;
+  height: 82.76%;
+  width: 1.95%;
+  top: 8.62%;
+  right: 0;
+  bottom: 8.62%;
+  left: 98.05%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.fi-rr-book-parent {
+  position: absolute;
+  height: 28.16%;
+  width: 85.42%;
+  top: 35.92%;
+  right: 7.29%;
+  bottom: 35.92%;
+  left: 7.29%;
+}
+.component-14-child {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.component-14 {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 720px);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15.8px);
+  width: 1440px;
+  height: 103px;
+  font-family: var(--tipografas-web-nav-bar);
+}
+.log-in {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 1023px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--tipografas-web-nav-bar-size);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+.group-child4,
+.title {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.group-child4 {
+  border-radius: var(--br-2xs);
+  background-color: var(--color-white);
+  width: 649px;
+  height: 427.76px;
+}
+.title {
+  height: 100%;
+  width: 100%;
+  line-height: 209.15%;
+  display: inline-block;
+}
+.arte-y-fotografa,
+.biografas-y-memorias,
+.biografas-y-memorias1 {
+  position: absolute;
+  top: 53px;
+  left: 57px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias,
+.biografas-y-memorias1 {
+  top: 90px;
+}
+.biografas-y-memorias1 {
+  top: 127px;
+}
+.arte-y-fotografa1,
+.biografas-y-memorias2,
+.biografas-y-memorias3 {
+  position: absolute;
+  top: 164px;
+  left: 57px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias2,
+.biografas-y-memorias3 {
+  top: 201px;
+}
+.biografas-y-memorias3 {
+  top: 238px;
+}
+.arte-y-fotografa2,
+.biografas-y-memorias4,
+.biografas-y-memorias5 {
+  position: absolute;
+  top: 275px;
+  left: 57px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias4,
+.biografas-y-memorias5 {
+  top: 312px;
+}
+.biografas-y-memorias5 {
+  top: 349px;
+}
+.arte-y-fotografa3,
+.biografas-y-memorias6,
+.biografas-y-memorias7 {
+  position: absolute;
+  top: 53px;
+  left: 354px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias6,
+.biografas-y-memorias7 {
+  top: 90px;
+}
+.biografas-y-memorias7 {
+  top: 127px;
+}
+.arte-y-fotografa4,
+.biografas-y-memorias8,
+.biografas-y-memorias9 {
+  position: absolute;
+  top: 164px;
+  left: 354px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias8,
+.biografas-y-memorias9 {
+  top: 201px;
+}
+.biografas-y-memorias9 {
+  top: 238px;
+}
+.biografas-y-memorias10,
+.biografas-y-memorias11,
+.biografas-y-memorias12 {
+  position: absolute;
+  top: 275px;
+  left: 354px;
+  width: 238px;
+  height: 25px;
+}
+.biografas-y-memorias11,
+.biografas-y-memorias12 {
+  top: 312px;
+}
+.biografas-y-memorias12 {
+  top: 349px;
+}
+.frame-child,
+.rectangle-parent1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 649px;
+  height: 427.76px;
+}
+.frame-child {
+  top: -15px;
+  left: 48px;
+  border-radius: 2px;
+  width: 31px;
+  height: 31px;
+  object-fit: cover;
+}
+.group-parent {
+  position: relative;
+  border-radius: var(--br-2xs);
+  background-color: var(--color-white);
+  width: 648px;
+  height: 431px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  text-align: left;
+  font-size: var(--font-size-mid);
+  color: var(--color-darkgray);
+  font-family: var(--font-rubik);
+}

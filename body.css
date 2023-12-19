@@ -1,0 +1,176 @@
+/* importamos las fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&family=Yellowtail&display=swap');
+*{
+    font-family: "Titillium Web";
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*Para colocar un fondo de imagen en un elemento*/
+element {
+  background-image: url("image.png");
+}
+  /*ara colocar un fondo de imagen que se repite*/
+element {
+    background-image: url("image.png");
+    background-repeat: repeat;
+  }
+  /*Para colocar un fondo de imagen que se repite solo horizontal o verticalmente*/
+  element {
+    background-image: url("image.png");
+    background-repeat: repeat-x;
+  }
+  
+  element {
+    background-image: url("image.png");
+    background-repeat: repeat-y;
+  }
+  
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #000;
+    color: #fff;
+    height: 60px;
+    padding: 10px;
+  }
+  
+  .logo {
+    float: left;
+    width: 200px;
+  }
+  
+  .menu {
+    float: right;
+    margin-right: 10px;
+  }
+  
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .menu a:hover {
+    color: #ccc;
+  }
+  
+  main {
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  .libros {
+    margin-top: 20px;
+  }
+  
+  .libros ul {
+    list-style: none;
+  }
+  
+  .libros ul li {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .libros ul li img {
+    width: 100px;
+    margin-right: 20px;
+  }
+  
+  .libros ul li h3 {
+    font-size: 1.2em;
+  }
+  
+  .libros ul li p {
+    font-size: 1em;
+  }
+  
+  .carrito-compras {
+    margin-top: 20px;
+  }
+  
+  .carrito-compras ul {
+    list-style: none;
+  }
+  
+  .carrito-compras ul li {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .carrito-compras ul li img {
+    width: 100px;
+    margin-right: 20px;
+  }
+  
+  .carrito-compras ul li p {
+    font-size: 1em;
+  }
+  
+  .promociones {
+    margin-top: 20px;
+  }
+  
+  .promociones ul {
+    list-style: none;
+  }
+  
+  .promociones ul li {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .promociones ul li img {
+    width: 100px;
+    margin-right: 20px;
+  }
+  
+  .promociones ul li p {
+    font-size: 1em;
+  }
+  
+  .suscripcion {
+    margin-top: 20px;
+  }
+  
+  .suscripcion p {
+    font-size: 1.2em;
+  }
+  
+  .suscripcion input {
+    width: 200px;
+  }
+  
+  .suscripcion button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  footer {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .icono {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .icono:hover {
+    transform: scale(1.1);
+  }
+  .navbar-toggler {
+    background-color: #000;
+    color: #fff;
+    border: none;
+  }
+  
