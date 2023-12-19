@@ -1,21 +1,93 @@
 .header {
   width: 100%;
-  height: 500px;
-  background-image: linear-gradient(
+  height: auto;
+  padding-bottom:  20px;
+  /* background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.15) 0%,
       rgba(0, 0, 0, 0.15) 100%
     ),
-    url(./img/fondonew.png);
+    url(./img/ima.jpg); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background: url(./img/Rectangle\ 19.png), lightgray 0px -204.296px / 100% 303.318% no-repeat;
+}
+
+.img-logo  {
+  width: 100px;
+  height: auto;
 }
 
 .contenido button {
   border-radius: 22px;
-  background: var(--PRIMARIO, #ef7828);
+  background:  #42a296;
   width: 186px;
   height: 51px;
   flex-shrink: 0;
+}
+
+.mb-5 {
+  border-left: 5px solid #42a296;
+  padding-left: 5px;
+
+}
+
+.card {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none ;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.precio {
+  color: #42a296;
+  font-size: 20px;
+  font-weight: bolder; 
+  text-align: center;
+
+}
+
+.banner-rojo {
+  width: 100%;
+  height: auto;
+  background: url(./img/banner-img-background-atm.png), lightgray -679.725px 0px / 147.203% 348.714% no-repeat;
+  margin-top: 30px;
+  
+}
+
+.container {
+  padding: 20px 0;
+}
+
+.promociones {
+  height: auto ;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  
+}
+
+.titulo-promociones {
+  color: #fff;
+}
+
+.btn {
+  color: #fff;
+  background-color: #42a296;
+  padding: 13px 60px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  font-weight: bold;
+  margin-top: 40px;
 }
