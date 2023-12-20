@@ -6,17 +6,27 @@
 <div class="back">
     <a href="{% url 'books' %}"><button class="back-button">< Back</button></a>
 </div>
-<div class="container">
+<div class="container pt-2" style="font-size: 20px;">
     {{ book.id_category }} > {{ book.title }}
-    <div class="row">
+    <div class="row pt-4">
         <div class="col col-sm-6">
-            <img src="{% static "img/placeholder-book-popular.png" %}"/>
+            <img src="{% static "img/placeholder-book-popular.png" %}" style="border-radius: 19px" height="675"/>
         </div>
         <div class="col col-sm-6">
-            <h2>{{ book.title }}</h2>
-            <p>By {{ book.id_author }}</p>
+            <p style="color: #07352F; font-size: 50px; font-weight: 400;">{{ book.title }}</p>
+            <p class="pt-3" style="color: #07352F; font-size: 22px; font-weight: 400;">By {{ book.id_author }}</p>
+            <p class="pt-3" style="font-size:27px; color:goldenrod">&starf;&starf;&starf;&starf;</p>
+            <p class="pt-3" style="color: #07352F; font-size: 28px; font-weight: 600;">${{ book.price }}</p>
 
-            <button id="add-cart" value="{{ book.id }}" type="button" class="btn btn-secondary">Add to cart</button>
+            <p class="pt-4" style="color: #07352F; font-size: 28px; font-weight: 400;">Format</p>
+            <div style="display: flex; align-items: flex-start; gap: 15px;">
+                <div style="display:flex;padding:15px 20px;justify-content:center;align-items:center;gap:10px;border-radius:15px;border:1px solid #C6C6C6;background:#FFF;"><img src="{% static "img/fi-rr-book.png" %}" alt="">Hard Cover</div>
+                <div style="display:flex;padding:15px 20px;justify-content:center;align-items:center;gap:10px;border-radius:15px;border:1px solid #C6C6C6;background:#FFF;"><img src="{% static "img/fi-rr-book.png" %}" alt="">Digital</div>
+                <div style="display:flex;padding:15px 20px;justify-content:center;align-items:center;gap:10px;border-radius:15px;border:1px solid #C6C6C6;background:#FFF;"><img src="{% static "img/fi-rr-book.png" %}" alt="">Audiobook</div>
+            </div>
+            <p class="pt-3" style="color: #07352F; font-size: 20px; font-weight: 300;">({{ book.stock }}) In stock</p>
+            <p style="color: #43A599; font-size: 18px; font-weight: 400;">Free shipping in orders from $300</p>
+            <button id="add-cart" value="{{ book.id }}" type="button" class="button-header">Add to cart</button>
 
         </div>
     </div>
@@ -31,6 +41,7 @@
                 url: '{% url 'cart_add' %}',
                 data: {
                     book_id: $('#add-cart').val(),
+                    book_qty: $('#qty-cart option:selected').text(),
                     csrfmiddlewaretoken: '{{ csrf_token }}',
                     action: 'post'
                 },

@@ -1,3 +1,5 @@
+from store.models import Book
+
 class Cart():
     def __init__(self, request):
         self.session = request.session
@@ -12,16 +14,53 @@ class Cart():
         # make sure cart is available on all pages of site
         self.cart = cart
 
-    def add(self, book):
+    def add(self, book, quantity):
         book_id = str(book.id)
+        book_qty = str(quantity)
+        
         # If a book is already in the cart then just increment quantity by 1
         if book_id in self.cart:
             #self.update(book_id, self.cart[book_id]['quantity'] + 1)
             pass
         else:
-            self.cart[book_id] = {'price: ': str(book.price)}
+            self.cart[book_id] = int(book_qty)
         
         self.session.modified = True
 
     def __len__(self):
         return len(self.cart)
+
+    def get_books(self):
+        # get ids from cart
+        books_ids = self.cart.keys()
+        # use ids to lookup books in database model
+        books = Book.objects.filter(id__in=books_ids)
+        
+        # return those looked up books
+        return books
+
+    def get_quants(self):
+        quantities = self.cart
+        return quantities
+
+    def update(self, book, quantity):
+        book_id = str(book)
+        book_qty = int(quantity)
+        
+        # get cart
+        ourcart = self.cart
+        # update dictionary/cart
+        ourcart[book_id] = book_qty
+        
+        self.session.modified = True
+        
+        thing = self.cart
+        return thing
+
+    def delete(self, book):
+        book_id = str(book)
+        # delete from dictionary/cart
+        if book_id in self.cart:
+            del self.cart[book_id]
+        
+        self.session.modified = True

@@ -28,6 +28,11 @@ body {
     font-size: 20px;
 }
 
+.navbar-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
 .nav-link {
     color: white;
     font-weight: 600;
@@ -556,7 +561,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
 }
 
 .back-button {
@@ -566,4 +571,16 @@ body {
     border: none;
     border-radius: 9px;
     background: #EEE;
+}
+
+.button-more {
+    width: 113px;
+    height: 37px;
+    flex-shrink: 0;
+    background-color: #43A599;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    box-shadow: 2px 2px 2.3px 0px rgba(0, 0, 0, 0.15);
 }

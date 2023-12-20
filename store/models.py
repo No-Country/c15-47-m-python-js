@@ -49,6 +49,8 @@ class Book (models.Model):
     price = models.DecimalField(max_digits=5, decimal_places=2)
     description = models.TextField(max_length=1000)
     stock = models.PositiveIntegerField(null=False)
+    rating = models.SmallIntegerField(null=False, default=0)
+    book_format = models.CharField(max_length=25, null=False, default="Hard Cover")
     image = models.ImageField(upload_to="media/images")
 
     def __str__(self):
