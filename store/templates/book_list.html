@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Bookstore{% endblock %}
+
+{% block body %}
+
+<div class="back">
+    <a href="{% url 'index' %}"><button class="back-button">< Home</button></a>
+</div>
+<div class="main-page-container pt-4">
+    <div class="row">
+        <div class="col-3 d-flex">
+            <div class="">
+                <input class="rounded-5 shadow border border-2 border-dark border-opacity-25" type="text" value="  &#x1F50E;&#xFE0E; Title, Genre">
+                <p class="text-dark fs-5 fw-medium font-family-Rubik m-0 px-1 pt-4">Categories</p>
+                <div class="border border-1 border-dark"></div>
+                <p class="m-0 px-1 py-2">
+                    <span class="text-dark fs-6 fw-normal">
+                        {% for category in categories %}
+                            {{ category.name }}</br>
+                        {% endfor %}
+                    </span>
+                </p>
+            
+                <p class="text-dark fs-5 fw-medium font-family-Rubik m-0 px-1 py-2">Price</p>
+                <div class="border border-1 border-dark"></div>
+                <p class="text-dark fs-6 fw-normal font-family-Rubik  m-0 px-1 py-2">Ascending<br/>Descending<br/></p>
+            </div>
+        </div>
+
+        <div class="col-9">
+            <div class="booklist">
+                <div class="booklist-category">
+                    <p class="text-secondary fs-4 fw-semibold m-0 pb-4">Category Name</p>
+                </div>
+                <div class="booklist-view">
+                    <div class="row">
+                        {% for book in books %}
+                            <div class="col-lg-6 pb-5" style="gap: 28">
+                                <div class="card flex-row" style="height: 256px; border-radius: 12px; border: 1px solid #B4B4B4">
+                                    <img class="card-img-left example-card-img-responsive" src="{% static 'img/placeholder-book-popular.png' %}" height="256" style="border-radius: 12px 0px 0px 12px; box-shadow: 2px 0px 2px 0px rgba(0, 0, 0, 0.25)"/>
+                                    <div class="card-body">
+                                        <a href="{% url "book" book.id %}" style="text-decoration:none;"><p class="text-dark fs-4 fw-semibold m-0 px-2">{{ book.title }}</p></a>
+                                        <p class="text-dark fs-6 fw-semibold m-0 px-2" style="font-size: 19px;">{{ book.id_author }}</p>
+                                        <p class="text-dark fs-6 fw-light m-0 px-2">{{ book.id_category }}</p>
+                                        <p class="m-0 px-2" style="font-size:larger; color:goldenrod">&starf;&starf;&starf;&starf;</p>
+                                        <p class="text-dark fs-4 fw-semibold m-0 px-2 text-end">${{ book.price }}</p>
+                                        <a href="{% url 'book' book.id%}"><button class="button-more">More...</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Shopping Cart - Bookstore{% endblock %}
+
+
+{% block body %}
+
+<div class="back">
+    <a href="{{request.META.HTTP_REFERER|escape}}"><button class="back-button">< Back</button></a>
+</div>
+
+<div class="row px-5 pt-5">
+    <p style="color:#000;font-weight: 500;font-size:25px">Cart</p>
+</div>
+<div class="row px-5">
+    <div class="col-md-6">
+        {% for book in cart_books %}
+        <div class="row pb-5">
+            <div class="col col-sm-3">
+                <img src="{% static "img/placeholder-book-popular.png" %}" style="width: 5.75rem; height: 8.625rem; flex-shrink: 0"/>
+            </div>
+            <div class="col col-sm-9">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <span style="color: #07352F; font-size: 1.125rem; font-style: normal; font-weight: 600; line-height: normal;">{{ book.title }}</span>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <button type="button" data-index="{{book.id}}" class="delete-book" style="border:0;background-color:white;"><i class="bi bi-trash"></i></button>
+                    </div>
+                    
+                </div>
+                <p style="color: #07352F; font-size: 0.8125rem; font-style: normal; font-weight: 500; line-height: normal;">By {{ book.id_author }}</p>
+                <p>&starf;&starf;&starf;&starf;&starf;</p>
+                <div class="row">
+                    <div class="col-md-2">
+                        Quantity:
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select form-select-sm" id="quantity" name="quantity" onchange="calculateTotal()">
+                            {% for key, value in quantities.items %}
+                                {% if key == book.id|slugify %}
+                            <option selected>{{ value }}</option>
+                                {% endif %}
+                            {% endfor %}
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 text-end">
+                        <p style="color: #000; font-size: 20px; font-weight: 700;" id="total_value">${{ book.price }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3" style="width: 85%; height: 1px; border: 1px #E5C59C solid"></div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="col-md-6 pt-4 px-4" style="width: 478px; height: 384px; flex-shrink: 0;border-radius: 13.15px; background: rgba(128, 108, 97, 0.10);">
+        <div class=""><p style="color: #000; font-size: 16px; font-weight: 700;">Order Summary</p></div>
+        <div class="table-responsive">
+            <table class="table table-borderless table_custom mb-0">
+                <tbody>
+                    <tr>
+                        <td>Sub Total:</td>
+                        <td class="text-end">$ {{ totals }}</td>
+                    </tr>
+                    <tr>
+                        <td>Shipping:</td>
+                        {% if cart_books %}
+                            <td class="text-end">$ 15</td>
+                        {% else %}
+                            <td class="text-end">$ 0</td>                    
+                        {% endif %}
+                    </tr>
+                    <tr>
+                        <td>Estimated Tax : </td>
+                        <td class="text-end">$ {{ taxes }}</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid black;">
+                        <td>Discount : </td>
+                        <td class="text-end">$ 0</td>
+                    </tr>
+                    <tr>
+                        <th>Total :</th>
+                        <td class="text-end">
+                            <span class="fw-bold">
+                                {% if cart_books %}
+                                $ {{ grand_total }}
+                                {% else %}
+                                $ 0
+                                {% endif %}
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- end table-responsive -->
+        <div class="row d-flex justify-content-between px-3 pt-4">
+            <a href="{% url 'success' %}" class="btn button-header" style="width: 186px; height: 42.173px; flex-shrink: 0; border-radius: 16px; background: #FE6600;text-decoration: none;">Pay Now</a>
+            <a href="{% url 'books' %}" class="btn button-header" style="width: 186px; height: 42.173px; flex-shrink: 0; border-radius: 16px; background: #FFB07A;text-decoration: none;">Keep Shopping</a>
+        </div>
+        
+    </div>
+</div>
+
+<div class="row pb-5">
+    <p class="px-5" style="color: #000; font-size: 22px; font-weight: 500;">Recommended</p>
+    <div class="popularproducts-list">
+        {% for book in popular_books|slice:":5" %}
+        <div class="div-card-bookmockup">
+            <div class="card-book-mockupmadre-atm">
+                <img src="{% static 'img/placeholder-book-popular.png' %}">
+            </div>
+            <div class="card-text-title-atm">
+                {{ book.title }}
+            </div>
+            <div class="card-text-subtitle-atm">
+                {{ book.id_author }}
+            </div>
+            <div class="card-text-price-atm">
+                $ {{ book.price }}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<script>
+    // Delete Item From Cart
+$(document).on('click', '.delete-book', function(e){
+    e.preventDefault();
+    // grab the book id
+    //var productid = $(this).data('index');
+
+    $.ajax({
+    type: 'POST',
+    url: '{% url 'cart_delete' %}',
+    data: {
+        book_id: $(this).data('index'),
+        csrfmiddlewaretoken: '{{ csrf_token }}',
+        action: 'post'
+    },
+    success: function(json){
+        //console.log(json)
+        //document.getElementById("cart_quantity").textContent = json.qty
+        location.reload();
+    },
+
+    error: function(xhr, errmsg, err){
+
+    }
+
+
+    });
+
+})
+</script>
+
+{% endblock body %}

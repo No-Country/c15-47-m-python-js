@@ -8,6 +8,9 @@
         <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
         <link href="{% static '../static/assets/css/styles.css' %}" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+        <!-- jquery-->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <title>
             {% block title %}
 
@@ -15,57 +18,51 @@
         </title>
     </head>
 
+    
     <body>
-        {% block navegation %}
-            <header class="header">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg p-3 mb-5 bg-white rounded m-auto">
-                    <div class="container-fluid">
-                    <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt="Logo" width="250px" /></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav px-3">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+        {% block navbar %}
+        <header class="header">
+            <nav class="navbar navbar-dark navbar-expand-lg p-3 mb-5 m-auto" style="background-color: white">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt="Logo" height="35"/></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav px-3">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black">Categories</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="#">Category 1</a>
+                                    <a style="color: black" class="dropdown-item" href="{% url 'books' %}">All books</a>
                                 </li>
+                                {% for category in categories %}
                                 <li>
-                                    <a class="dropdown-item" href="#">Category 2</a>
+                                    <a style="color: black" class="dropdown-item" href="#">{{ category.name }}</a>
                                 </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Category 3</a>
-                                </li>
-                                </ul>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        {% if user.is_authenticated %}
+                            <li class="nav-item px-2">
+                                <a style="color: black" class="nav-link" href="{% url "cart_summary"%}">Cart <span id="cart_quantity">({{ cart|length }})</span></a>
                             </li>
-                            {% if user.is_authenticated %}
-                                <li class="nav-item px-2">
-                                    <a class="nav-link" href="#">Cart</a>
-                                </li>
-                                <li class="nav-item px-2">
-                                    <a class="nav-link" href="#">Profile</a>
-                                </li>
-                                <li class="nav-item px-2">
-                                    <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-                                </li>
-                            {% else %}
-                                <li class="nav-item mx-auto">
-                                    <a class="nav-link" href="{% url 'login' %}">Login</a>
-                                </li>
-                            {% endif %}
-                        </ul>
-                    </div>
-                    </div>
-                </nav>
-                <div class="header-text px-3 mx-5 w-50">
-                    <h1>Best Books of 2023</h1>
-                    <p class="my-3">In this beautiful and moving novel about family, love, and growing up, Ann Patchett once again proves herself one of America’s finest writers.</p>
-                    <div class="button-head py-4">
-                        <button class="button-header">Buy</button>
-                    </div>
+                            <li style="color: black"class="nav-item px-2">
+                                <a style="color: black" class="nav-link" href="#">Hi, {{ request.user.username }}!</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a style="color: black" class="nav-link" href="{% url 'logout' %}">Logout</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item mx-auto">
+                                <a style="color: black" class="nav-link" href="{% url 'login' %}">Login</a>
+                            </li>
+                        {% endif %}
+                    </ul>
                 </div>
-            </header>
-        {% endblock %}
+                </div>
+            </nav>
+        </header>
+        {% endblock navbar %}
 
         <div class="container-fluid">
         {% block body %}
@@ -74,7 +71,81 @@
         </div>
 
         {% block footer %}
-
+        <div class="footer-organism">
+            <div class="footer-rectangle-atm">
+                <div class="container-fluid g-1">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="footer-listtitle">
+                                CATEGORIES
+                            </div>
+                            <div class="footer-list-atm">
+                                Art and Photography
+                            </br>
+                                Biographies and Memoirs
+                            </br>
+                                Science Fiction and Fantasy
+                            </br>
+                                Cooking and Gastronomy
+                            </br>
+                                Comics and Graphic Novels
+                            </br>
+                                Sports and Leisure
+                            </br>
+                                Economics & Finance
+                            </br>
+                                Education and Reference
+                            </br>
+                                Family and Relationships
+                            </br>
+                                Home & Gardening
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-3">
+                            <div class="footer-listtitle">
+                                ACCOUNT
+                            </div>
+                            <div class="footer-list-atm">
+                                Log In
+                            </br>
+                                Sign In
+                            </br>
+                                Forgot my password
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-3">
+                            <div class="footer-listtitle">
+                                SOCIAL MEDIA
+                            </div>
+                            <div class="footer-list-atm">
+                                Facebook
+                            </br>
+                                WhatsApp
+                            </br>
+                                Instagram
+                            </br>
+                                Twitter
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-3">
+                            <div class="footer-listtitle">
+                                LEGAL
+                            </div>
+                            <div class="footer-list-atm">
+                                Cookies
+                            </br>
+                                Terms & Conditions
+                            </br>
+                                Privacy Policies
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
         {% endblock %}
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>

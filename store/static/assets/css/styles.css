@@ -4,7 +4,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.header {
+.header-index {
     background: url("/static/img/header.png") no-repeat center;
     background-size: 100%;
     min-height: 70vh;
@@ -12,20 +12,25 @@ body {
     z-index: 9999;
 }
 
-.header .navbar {
+.header-index .navbar {
     background-color: transparent !important;
 }
 
-.header-text h1 {
+.header-index-text h1 {
     color: white;
     font-weight: bold;
     font-size: 48px;
 }
 
-.header-text p {
+.header-index-text p {
     color: white;
     font-weight: 200;
     font-size: 20px;
+}
+
+.navbar-nav{
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav-link {
@@ -159,7 +164,7 @@ body {
     flex-shrink: 0;
     color: var(--SECUNDARIO, #412E27);
     font-family: Open Sans;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -551,3 +556,33 @@ body {
     font-weight: 400;
     line-height: 209.153%; /* 35.556px */
 }
+
+.main-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.back-button {
+    width: 130px;
+    height: 35px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 9px;
+    background: #EEE;
+}
+
+.button-more {
+    width: 113px;
+    height: 37px;
+    flex-shrink: 0;
+    background-color: #43A599;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    box-shadow: 2px 2px 2.3px 0px rgba(0, 0, 0, 0.15);
+}
+
+.table_custom { --bs-table-bg: transparent !important; }

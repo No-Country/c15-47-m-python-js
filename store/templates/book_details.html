@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Bookstore{% endblock %}
+
+{% block body %}
+
+<div class="back">
+    <a href="{% url 'books' %}"><button class="back-button">< Back</button></a>
+</div>
+
+<div class="container pt-3" style="font-size: 20px;">
+    {{ book.id_category }} > {{ book.title }}
+    <div class="row pt-4 pb-5">
+        <div class="col col-sm-6">
+            <img src="{% static "img/placeholder-book-popular.png" %}" style="border-radius: 19px" height="675"/>
+        </div>
+        <div class="col col-sm-6">
+            <p style="color: #07352F; font-size: 50px; font-weight: 400;">{{ book.title }}</p>
+            <p class="pt-3" style="color: #07352F; font-size: 22px; font-weight: 400;">By {{ book.id_author }}</p>
+            <p class="pt-3" style="font-size:27px; color:goldenrod">&starf;&starf;&starf;&starf;</p>
+            <p class="pt-3" style="color: #07352F; font-size: 28px; font-weight: 600;">${{ book.price }}</p>
+
+            <p class="pt-4" style="color: #07352F; font-size: 28px; font-weight: 400;">Format</p>
+            <div style="display: flex; align-items: flex-start; gap: 15px;">
+                <div style="display:flex;padding:15px 20px;justify-content:center;align-items:center;gap:10px;border-radius:15px;border:1px solid #C6C6C6;background:#FFF;"><img src="{% static "img/fi-rr-book.png" %}" alt="">Hard Cover</div>
+                <div style="display:flex;padding:15px 20px;justify-content:center;align-items:center;gap:10px;border-radius:15px;border:1px solid #C6C6C6;background:#FFF;"><img src="{% static "img/fi-rr-book.png" %}" alt="">Digital</div>
+                <div style="display:flex;padding:15px 20px;justify-content:center;align-items:center;gap:10px;border-radius:15px;border:1px solid #C6C6C6;background:#FFF;"><img src="{% static "img/fi-rr-book.png" %}" alt="">Audiobook</div>
+            </div>
+            <p class="pt-3" style="color: #07352F; font-size: 20px; font-weight: 300;">({{ book.stock }}) In stock</p>
+            <p style="color: #43A599; font-size: 18px; font-weight: 400;">Free shipping in orders from $300</p>
+            <div class="row">
+                <div class="d-flex col-md-3">
+                    Quantity:
+                </div>
+                <div class="col-md-3 d-flex align-center">
+                    <select class="form-select form-select-sm" id="qty-cart">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="col-md-3 d-flex align-center">
+                    <button id="add-cart" value="{{ book.id }}" type="button" class="button-header">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row pb-5">
+    <p class="px-5" style="color: #000; font-size: 22px; font-weight: 500;">Recommended</p>
+    <div class="popularproducts-list">
+        {% for book in popular_books|slice:":5" %}
+        <div class="div-card-bookmockup">
+            <div class="card-book-mockupmadre-atm">
+                <img src="{% static 'img/placeholder-book-popular.png' %}">
+            </div>
+            <div class="card-text-title-atm">
+                {{ book.title }}
+            </div>
+            <div class="card-text-subtitle-atm">
+                {{ book.id_author }}
+            </div>
+            <div class="card-text-price-atm">
+                $ {{ book.price }}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+    <script>
+        // Check if button pressed
+        $(document).on('click', '#add-cart', function(e){
+            e.preventDefault();
+            $.ajax({
+                type: 'POST',
+                url: '{% url 'cart_add' %}',
+                data: {
+                    book_id: $('#add-cart').val(),
+                    book_qty: $('#qty-cart option:selected').text(),
+                    csrfmiddlewaretoken: '{{ csrf_token }}',
+                    action: 'post'
+                },
+        
+                success: function(json){
+                    //console.log(json)
+                    document.getElementById("cart_quantity").textContent = '(' + json.qty + ')'
+                },
+        
+                error: function(xhr, errmsg, err){
+        
+                }
+        
+        
+            });
+        
+        
+        
+        })
+        
+        
+        
+        
+        </script>
+{% endblock body %}

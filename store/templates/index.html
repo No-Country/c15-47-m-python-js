@@ -3,7 +3,55 @@
 
 {% block title %}Bookstore{% endblock %}
 
-
+{% block navbar %}
+<header class="header-index">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg p-3 mb-5 bg-white rounded m-auto">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt="Logo"/></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav px-3">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a style="color: black" class="dropdown-item" href="{% url 'books' %}">All books</a>
+                        </li>
+                        {% for category in categories %}
+                        <li>
+                            <a style="color: black" class="dropdown-item" href="#">{{ category.name }}</a>
+                        </li>
+                        {%  endfor%}
+                    </ul>
+                </li>
+                {% if user.is_authenticated %}
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="{% url "cart_summary"%}">Cart <span id="cart_quantity">({{ cart|length }})</span></a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="#">Hi, {{ request.user.username }}!</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item mx-auto">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <div class="header-index-text px-3 mx-5 w-50">
+        <h1>Best Books of 2023</h1>
+        <p class="my-3">In this beautiful and moving novel about family, love, and growing up, Ann Patchett once again proves herself one of America’s finest writers.</p>
+        <div class="button-head py-4">
+            <button class="button-header">Buy</button>
+        </div>
+    </div>
+</header>
+{% endblock navbar %}
 
 {% block body %}
 
@@ -32,77 +80,22 @@
             </div>
         </div>
         <div class="popularproducts-list">
+            {% for book in popular_books|slice:":5" %}
             <div class="div-card-bookmockup">
                 <div class="card-book-mockupmadre-atm">
                     <img src="{% static 'img/placeholder-book-popular.png' %}">
                 </div>
                 <div class="card-text-title-atm">
-                    Book 1
+                    {{ book.title }}
                 </div>
                 <div class="card-text-subtitle-atm">
-                    Author
+                    {{ book.id_author }}
                 </div>
                 <div class="card-text-price-atm">
-                    $99.90
+                    $ {{ book.price }}
                 </div>
             </div>
-            <div class="div-card-bookmockup">
-                <div class="card-book-mockupmadre-atm">
-                    <img src="{% static 'img/placeholder-book-popular.png' %}">
-                </div>
-                <div class="card-text-title-atm">
-                    Book 1
-                </div>
-                <div class="card-text-subtitle-atm">
-                    Author
-                </div>
-                <div class="card-text-price-atm">
-                    $99.90
-                </div>
-            </div>
-            <div class="div-card-bookmockup">
-                <div class="card-book-mockupmadre-atm">
-                    <img src="{% static 'img/placeholder-book-popular.png' %}">
-                </div>
-                <div class="card-text-title-atm">
-                    Book 1
-                </div>
-                <div class="card-text-subtitle-atm">
-                    Author
-                </div>
-                <div class="card-text-price-atm">
-                    $99.90
-                </div>
-            </div>
-            <div class="div-card-bookmockup">
-                <div class="card-book-mockupmadre-atm">
-                    <img src="{% static 'img/placeholder-book-popular.png' %}">
-                </div>
-                <div class="card-text-title-atm">
-                    Book 1
-                </div>
-                <div class="card-text-subtitle-atm">
-                    Author
-                </div>
-                <div class="card-text-price-atm">
-                    $99.90
-                </div>
-            </div>
-            <div class="div-card-bookmockup">
-                <div class="card-book-mockupmadre-atm">
-                    <img src="{% static 'img/placeholder-book-popular.png' %}">
-                </div>
-                <div class="card-text-title-atm">
-                    Book 1
-                </div>
-                <div class="card-text-subtitle-atm">
-                    Author
-                </div>
-                <div class="card-text-price-atm">
-                    $99.90
-                </div>
-            </div>
-
+            {% endfor %}
         </div>
     </div>
     
@@ -163,7 +156,7 @@
         </div>
     </div>
 
-    <div class="row reviews-organism">
+    {% comment %} <div class="row reviews-organism">
         <div class="col-lg-12">
             <div class="reviews-title-molecule">
                 <div class="popular-rectangle-atm">
@@ -262,9 +255,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> {% endcomment %}
 
-    <div class="newsletter-organism">
+    <div class="newsletter-organism mt-5 mb-5">
         <div class="newsletter-content">
             <div class="row">
                 <div class="column w-50">
@@ -289,80 +282,6 @@
         </div>
     </div>
 
-    <div class="footer-organism">
-        <div class="footer-rectangle-atm">
-            <div class="container-fluid g-1">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="footer-listtitle">
-                            CATEGORIES
-                        </div>
-                        <div class="footer-list-atm">
-                            Art and Photography
-                        </br>
-                            Biographies and Memoirs
-                        </br>
-                            Science Fiction and Fantasy
-                        </br>
-                            Cooking and Gastronomy
-                        </br>
-                            Comics and Graphic Novels
-                        </br>
-                            Sports and Leisure
-                        </br>
-                            Economics & Finance
-                        </br>
-                            Education and Reference
-                        </br>
-                            Family and Relationships
-                        </br>
-                            Home & Gardening
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3">
-                        <div class="footer-listtitle">
-                            ACCOUNT
-                        </div>
-                        <div class="footer-list-atm">
-                            Log In
-                        </br>
-                            Sign In
-                        </br>
-                            Forgot my password
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3">
-                        <div class="footer-listtitle">
-                            SOCIAL MEDIA
-                        </div>
-                        <div class="footer-list-atm">
-                            Facebook
-                        </br>
-                            WhatsApp
-                        </br>
-                            Instagram
-                        </br>
-                            Twitter
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3">
-                        <div class="footer-listtitle">
-                            LEGAL
-                        </div>
-                        <div class="footer-list-atm">
-                            Cookies
-                        </br>
-                            Terms & Conditions
-                        </br>
-                            Privacy Policies
-                        </div>
-                    </div>
-                </div>
-            </div>  
-        </div>
-    </div>
+    
 
 {% endblock %}
