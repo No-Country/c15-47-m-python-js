@@ -164,7 +164,7 @@ body {
     flex-shrink: 0;
     color: var(--SECUNDARIO, #412E27);
     font-family: Open Sans;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -584,3 +584,5 @@ body {
     border: none;
     box-shadow: 2px 2px 2.3px 0px rgba(0, 0, 0, 0.15);
 }
+
+.table_custom { --bs-table-bg: transparent !important; }

@@ -46,7 +46,7 @@
                                         <p class="text-dark fs-6 fw-light m-0 px-2">{{ book.id_category }}</p>
                                         <p class="m-0 px-2" style="font-size:larger; color:goldenrod">&starf;&starf;&starf;&starf;</p>
                                         <p class="text-dark fs-4 fw-semibold m-0 px-2 text-end">${{ book.price }}</p>
-                                        <button class="button-more">More...</button>
+                                        <a href="{% url 'book' book.id%}"><button class="button-more">More...</button></a>
                                     </div>
                                 </div>
                             </div>

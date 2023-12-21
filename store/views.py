@@ -4,6 +4,7 @@ from django.views import View
 from django.views.generic import ListView, DetailView
 from .models import Customer, Book, Category
 import contextlib
+import random
 
 User = get_user_model()
 
@@ -22,6 +23,7 @@ class IndexView(View):
         except Customer.DoesNotExist:
             pass
         context['categories'] = Category.objects.all()
+        context['popular_books'] = Book.objects.all()
         return render(request, "index.html", context)
 
 class BookListView(ListView):
@@ -42,4 +44,9 @@ class BookDetail(View):
     def get(self, request, pk):
         book = get_object_or_404(Book, pk=pk)
         context = {'book': book}
+        context['popular_books'] = Book.objects.all()
         return render(request, self.template_name, context)
+
+def success(request):
+    template_name="success.html"
+    return render(request, template_name)

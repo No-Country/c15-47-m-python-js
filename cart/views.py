@@ -3,15 +3,23 @@ from .cart import Cart
 from store.models import Book
 from django.http import JsonResponse
 
+
 def cart_summary(request):
 	# get the cart
 	cart = Cart(request)
 	cart_books = cart.get_books
 	quantities = cart.get_quants
+	totals = cart.cart_total()
+	taxes = round(float(totals) * 0.0725, 2)
+	grand_total = round(float(totals) + taxes + 15, 2)
 	context = {
 		"cart_books": cart_books,
-		"quantities": quantities
+		"quantities": quantities,
+		"totals": totals,
+		"taxes": taxes,
+		"grand_total": grand_total
 	}
+	context['popular_books'] = Book.objects.all()
 	return render(request, "cart_summary.html", context)
 
 
@@ -57,3 +65,10 @@ def cart_update(request):
 		
 		response = JsonResponse({'qty':book_qty})
 		return response
+
+def clear_cart(request):
+    cart = Cart(request)
+    cart_books = cart.get_books
+    if request.POST.get('action') == 'post':
+        cart.clear_cart(cart_books)
+    return render(request, 'success.html')

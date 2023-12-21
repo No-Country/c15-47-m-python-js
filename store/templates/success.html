@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Bookstore{% endblock %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col d-flex flex-column align-items-center justify-content-center">
+        <div class="success-cart d-flex">
+            <img src="{% static 'img/success.png' %}" height="64">
+        </div>
+        <p style="color: #412E27; font-size: 20px; font-weight: 400;">Congratulations!</p>
+        <p style="color: #412E27; font-size: 28px; font-weight: 400;">Purchase successfully completed</p>
+        <p style="color: #412E27; font-size: 15px; font-weight: 400;">Your order has been shipped, enjoy!</p>
+        
+        <a href="{% url 'index' %}" class="btn button-header mt-5 mb-5 align-middle" style="border-radius: 42px; background: #FE6600;">Home</a>
+    </div>
+</div>
+
+{% endblock body %}
