@@ -8,7 +8,7 @@
 {% block body %}
 
 <div class="back">
-    <a href="{{request.META.HTTP_REFERER|escape}}"><button class="back-button">< Back</button></a>
+    <a href="{% url 'books' %}"><button class="back-button">< Back</button></a>
 </div>
 
 <div class="row px-5 pt-5">

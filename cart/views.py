@@ -66,9 +66,5 @@ def cart_update(request):
 		response = JsonResponse({'qty':book_qty})
 		return response
 
-def clear_cart(request):
-    cart = Cart(request)
-    cart_books = cart.get_books
-    if request.POST.get('action') == 'post':
-        cart.clear_cart(cart_books)
+def success(request):
     return render(request, 'success.html')
