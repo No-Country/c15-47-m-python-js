@@ -4,134 +4,84 @@
 {% block title %}Bookstore{% endblock %}
 
 {% block navbar %}
-<header class="header-index">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg p-3 mb-5 bg-white rounded m-auto">
-        <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt="Logo"/></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav px-3">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li>
-                            <a style="color: black" class="dropdown-item" href="{% url 'books' %}">All books</a>
+    
+    <header class="header-index">
+        <nav class="navbar navbar-expand-lg navbar-light shadow-lg bg-white">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img src="{% static 'img/logo.png' %}" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a style="color: black" class="dropdown-item" href="{% url 'books' %}">All books</a>
+                                </li>
+                                {% for category in categories %}
+                                <li>
+                                    <a style="color: black" class="dropdown-item" href="#">{{ category.name }}</a>
+                                </li>
+                                {%  endfor%}
+                            </ul>
                         </li>
-                        {% for category in categories %}
-                        <li>
-                            <a style="color: black" class="dropdown-item" href="#">{{ category.name }}</a>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'cart_summary'%}">Cart <span id="cart_quantity">({{ cart|length }})</span></a>
                         </li>
-                        {%  endfor%}
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Hi, {{ request.user.username }}!</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login' %}">Login</a>
+                        </li>
+                        {% endif %}
                     </ul>
-                </li>
-                {% if user.is_authenticated %}
-                    <li class="nav-item px-2">
-                        <a class="nav-link" href="{% url "cart_summary"%}">Cart <span id="cart_quantity">({{ cart|length }})</span></a>
-                    </li>
-                    <li class="nav-item px-2">
-                        <a class="nav-link" href="#">Hi, {{ request.user.username }}!</a>
-                    </li>
-                    <li class="nav-item px-2">
-                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-                    </li>
-                {% else %}
-                    <li class="nav-item mx-auto">
-                        <a class="nav-link" href="{% url 'login' %}">Login</a>
-                    </li>
-                {% endif %}
-            </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="header-container container h-100">
+            <div class="row h-100">
+                <div class="header-index-text px-3 w-50">
+                    <h1>Best Books of 2023</h1>
+                    <p class="my-3">In this beautiful and moving novel about family, love, and growing up, Ann Patchett once again proves herself one of America’s finest writers.</p>
+                    <div class="button-head">
+                        <button class="button-header">Buy</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        </div>
-    </nav>
-    <div class="header-index-text px-3 mx-5 w-50">
-        <h1>Best Books of 2023</h1>
-        <p class="my-3">In this beautiful and moving novel about family, love, and growing up, Ann Patchett once again proves herself one of America’s finest writers.</p>
-        <div class="button-head py-4">
-            <button class="button-header">Buy</button>
-        </div>
-    </div>
-</header>
+    </header>
+
 {% endblock navbar %}
 
 {% block body %}
 
-    <div class="search py-5">
-        <form action="">
-            <input type="text" class="search-form">
-        </form>
-    </div>
-
-    <div class="productpopular-organism">
-        <div class="popular-text">
-            <div class="popular-rectangle-atm">
-                <div class="popular-rectangle-atm-rect">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="65" viewBox="0 0 6 65" fill="none">
-                        <rect width="6" height="65" fill="#43A599"/>
-                        </svg>
-                </div>
-            </div>
-
-            <div class="popular-text-atm">
-                <div class="popular-text-atm-in">
-                    <div class="popular-text-atm-in-text">
-                        Popular
+    <div class="container-fluid pt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <form>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="button-addon" style="background: white; box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.09);  border-radius: 43px;  border: 2px rgba(65, 46, 39, 0.21) solid;">
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="popularproducts-list">
-            {% for book in popular_books|slice:":5" %}
-            <div class="div-card-bookmockup">
-                <div class="card-book-mockupmadre-atm">
-                    <img src="{% static 'img/placeholder-book-popular.png' %}">
-                </div>
-                <div class="card-text-title-atm">
-                    {{ book.title }}
-                </div>
-                <div class="card-text-subtitle-atm">
-                    {{ book.id_author }}
-                </div>
-                <div class="card-text-price-atm">
-                    $ {{ book.price }}
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-    
-    <div class="bannerchristmas-organism">
-        <div class="banner-img-background-atm">
-            <div class="bannerchristmas-text">
-                <div class="bannerchristmas-title-atm">
-                    Cyber Week Deals
-                </div>
-                <div class="bannerchristmas-button">
-                    <button class="button-header">View More</button>
-                </div>
-            </div>
-            <div class="bannerchristmas-imgmockup-atm">
-                <div class="bannerchristmas-imgmockup-atm-container">
-                    <div class="bannerchristmas-imgmockup-atm-img">
-                        <img src="{% static 'img/placeholder-book-christmas.png' %}">
-                    </div>
-                </div>
-                <div class="bannerchristmas-imgmockup-atm-container">
-                    <div class="bannerchristmas-imgmockup-atm-img">
-                        <img src="{% static 'img/placeholder-book-christmas.png' %}">
-                    </div>
-                </div>
-                <div class="bannerchristmas-imgmockup-atm-container">
-                    <div class="bannerchristmas-imgmockup-atm-img">
-                        <img src="{% static 'img/placeholder-book-christmas.png' %}">
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
 
-    <div class="author-organism">
-        <div class="author-text-molecule">
-            <div class="author-text-molecule-title">
+    <div class="container-fluid pt-5">
+        <div class="row">
+            <div class="popular-text">
                 <div class="popular-rectangle-atm">
                     <div class="popular-rectangle-atm-rect">
                         <svg xmlns="http://www.w3.org/2000/svg" width="6" height="65" viewBox="0 0 6 65" fill="none">
@@ -139,22 +89,114 @@
                             </svg>
                     </div>
                 </div>
+
                 <div class="popular-text-atm">
                     <div class="popular-text-atm-in">
                         <div class="popular-text-atm-in-text">
-                            Danielle Steel
+                            Popular
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="biography-textsubtitle-atm">
-                Danielle Steel is a passionate author whose stories explore the nuances of the human condition. Born in Buenos Aires, Argentina, she has carried her unique experiences and perspectives through her travels and experiences. Her connection to literature began in childhood, when she would retreat into the pages of books to explore distant and unknown worlds.
+
+            <div class="row justify-content-center pt-5">
+                {% for book in popular_books|slice:":6" %}
+                <div class="col-lg-2 col-md-3 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="{% static 'img/placeholder-book-popular.png' %}" class="card-img-top" alt="Book Image">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ book.title }}</h5>
+                            <p class="card-text">{{ book.id_author }}</p>
+                            <p class="card-text">$ {{ book.price }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
         </div>
-        <div class="author-img-molecule">
-            <img src="{% static 'img/danielle.png' %}">
+    </div>
+
+    <div class="container-fluid mt-5">
+        <div class="row banner-img-background-atm">
+            <div class="col-lg-6">
+                <div class="bannerchristmas-organism">
+                    <div class="">
+                        <div class="bannerchristmas-text">
+                            <div class="bannerchristmas-title-atm">
+                                Cyber Week Deals
+                            </div>
+                            <div class="bannerchristmas-button">
+                                <button class="button-header">View More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 banner-right">
+                <div class="bannerchristmas-imgmockup-atm">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="bannerchristmas-imgmockup-atm-container">
+                                <div class="bannerchristmas-imgmockup-atm-img">
+                                    <img src="{% static 'img/placeholder-book-christmas.png' %}" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="bannerchristmas-imgmockup-atm-container">
+                                <div class="bannerchristmas-imgmockup-atm-img">
+                                    <img src="{% static 'img/placeholder-book-christmas.png' %}" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="bannerchristmas-imgmockup-atm-container">
+                                <div class="bannerchristmas-imgmockup-atm-img">
+                                    <img src="{% static 'img/placeholder-book-christmas.png' %}" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="author-organism">
+                    <div class="author-text-molecule">
+                        <div class="author-text-molecule-title">
+                            <div class="popular-rectangle-atm">
+                                <div class="popular-rectangle-atm-rect">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="65" viewBox="0 0 6 65" fill="none">
+                                        <rect width="6" height="65" fill="#43A599"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="popular-text-atm">
+                                <div class="popular-text-atm-in">
+                                    <div class="popular-text-atm-in-text">
+                                        Danielle Steel
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="biography-textsubtitle-atm">
+                            Danielle Steel is a passionate author whose stories explore the nuances of the human condition. Born in Buenos Aires, Argentina, she has carried her unique experiences and perspectives through her travels and experiences. Her connection to literature began in childhood, when she would retreat into the pages of books to explore distant and unknown worlds.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="author-img-molecule">
+                    <img src="{% static 'img/danielle.png' %}" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
     {% comment %} <div class="row reviews-organism">
         <div class="col-lg-12">
@@ -257,31 +299,31 @@
         </div>
     </div> {% endcomment %}
 
-    <div class="newsletter-organism mt-5 mb-5">
-        <div class="newsletter-content">
-            <div class="row">
-                <div class="column w-50">
-                    <div class="newsletter-texttitle-atm">
-                        Subscribe to our Newsletter
+    <div class="container mt-5">
+        <div class="row newsletter-organism mt-5 mb-5">
+            <div class="newsletter-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="newsletter-texttitle-atm">
+                            Subscribe to our Newsletter
+                        </div>
                     </div>
-                </div>
-                <div class="column w-50">
-                    <div class="newsletter-textsubtitle-atm">
-                        Submit your email address to receive offers & updates.
-                    </div>
-                    <div class="newsletter-emailform mt-3">
-                        <form action="">
-                            <div class="input-group">
-                                <input class="newsletter-emailform-input" type="text">
-                                <button class="newsletter-emailform-button">></button>
-                            </div>
-                        </form>
+                    <div class="col-md-6">
+                        <div class="newsletter-textsubtitle-atm">
+                            Submit your email address to receive offers & updates.
+                        </div>
+                        <div class="newsletter-emailform mt-3">
+                            <form action="">
+                                <div class="input-group">
+                                    <input class="newsletter-emailform-input form-control" type="text">
+                                    <button class="newsletter-emailform-button btn btn-primary">></button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    
 
 {% endblock %}

@@ -83,15 +83,3 @@ class Cart():
 			del self.cart[book_id]
 		
 		self.session.modified = True
-
-	def clear_cart(self, book):
-		# get ids from cart
-		books_ids = self.cart.keys()
-		# use ids to lookup books in database model
-		books = Book.objects.filter(id__in=books_ids)
-		# delete from dictionary/cart
-		for book in books:
-			if book in self.cart:
-				del self.cart[book]
-		
-		self.session.modified = True

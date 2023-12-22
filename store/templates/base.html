@@ -37,7 +37,7 @@
                                 </li>
                                 {% for category in categories %}
                                 <li>
-                                    <a style="color: black" class="dropdown-item" href="#">{{ category.name }}</a>
+                                    <a style="color: black" class="dropdown-item" href="{% url 'category' category %}">{{ category.name }}</a>
                                 </li>
                                 {% endfor %}
                             </ul>
@@ -64,11 +64,10 @@
         </header>
         {% endblock navbar %}
 
-        <div class="container-fluid">
         {% block body %}
 
         {% endblock %}
-        </div>
+
 
         {% block footer %}
         <div class="footer-organism">
