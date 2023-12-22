@@ -40,7 +40,7 @@
                         {% for book in books %}
                             <div class="col-lg-6 pb-5" style="gap: 28">
                                 <div class="card flex-row" style="height: 256px; border-radius: 12px; border: 1px solid #B4B4B4">
-                                    <img class="card-img-left example-card-img-responsive" src="{% static 'img/placeholder-book-popular.png' %}" height="256" style="border-radius: 12px 0px 0px 12px; box-shadow: 2px 0px 2px 0px rgba(0, 0, 0, 0.25)"/>
+                                    <img class="card-img-left example-card-img-responsive" src="{{ book.image.url }}" height="256" style="border-radius: 12px 0px 0px 12px; box-shadow: 2px 0px 2px 0px rgba(0, 0, 0, 0.25)"/>
                                     <div class="card-body">
                                         <a href="{% url "book" book.id %}" style="text-decoration:none;"><p class="text-dark fs-4 fw-semibold m-0 px-2">{{ book.title }}</p></a>
                                         <p class="text-dark fs-6 fw-semibold m-0 px-2" style="font-size: 19px;">{{ book.id_author }}</p>
