@@ -19,7 +19,7 @@
         {% for book in cart_books %}
         <div class="row pb-5">
             <div class="col col-sm-3">
-                <img src="{% static "img/placeholder-book-popular.png" %}" style="width: 5.75rem; height: 8.625rem; flex-shrink: 0"/>
+                <img src="{{ book.image.url }}" style="width: 5.75rem; height: 8.625rem; flex-shrink: 0"/>
             </div>
             <div class="col col-sm-9">
                 <div class="row">
