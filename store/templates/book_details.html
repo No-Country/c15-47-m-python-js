@@ -12,7 +12,7 @@
     {{ book.id_category }} > {{ book.title }}
     <div class="row pt-4 pb-5">
         <div class="col col-sm-6">
-            <img src="{% static "img/placeholder-book-popular.png" %}" style="border-radius: 19px" height="675"/>
+            <img src="{{ book.image.url }}" style="border-radius: 19px" height="675"/>
         </div>
         <div class="col col-sm-6">
             <p style="color: #07352F; font-size: 50px; font-weight: 400;">{{ book.title }}</p>

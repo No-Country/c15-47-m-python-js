@@ -132,3 +132,5 @@ nocountry/static/admin/js/vendor/select2/i18n/zh-TW.js
 nocountry/static/admin/js/vendor/xregexp/LICENSE.txt
 nocountry/static/admin/js/vendor/xregexp/xregexp.js
 nocountry/static/admin/js/vendor/xregexp/xregexp.min.js
+mydatabase.sqlite3
+mydatabase.sqlite3
